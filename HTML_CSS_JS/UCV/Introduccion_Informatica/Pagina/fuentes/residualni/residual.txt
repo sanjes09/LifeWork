@@ -1,0 +1,101 @@
+Residuální
+
+by Vít Èondák
+2015-2016
+
+Email:	gunny(a)post.cz
+Web:	fonty.condak.cz
+FB:	facebook.com/GunnyHandwritingFont
+
+En Cz Sk De Fr Pl
+
+[ English License ]
+
+Free for personal or non-commercial use.
+In case you want to use the font for a commercial project please contact me to buy a license.
+
+The public version of the font intentionally does not include numbers 5 to 9.
+The full version is available only to licensed users.
+
+If you think something in this font doesn't feel right please contact me too.
+
+
+[ English Description ]
+
+A curly font immitating brush calligraphy with really big upper case characters.
+The big underline swash is mapped as tilde character (~).
+
+
+[ Èeská licence ]
+
+Zdarma pro osobní a nekomerèní užití.
+V pøípadì, že chcete font použít pro komerèní úèely, je nutné mì kontaktovat a koupit si licenci.
+
+Veøejná verze fontu zámìrnì neobsahuje èíslice 5 až 9.
+Plná verze je dostupná pouze licencovaným uživatelùm.
+
+Pokud ve fontu objevíte nìco, co by bylo vhodné opravit nebo doladit, tak mì prosím kontaktujte.
+
+
+[ Èeský popis ]
+
+Zvlnìný font v písmomalíøském stylu se skuteènì velkými velkými (ehm) písmeny.
+Velká podtrhávací vlnovka je namapovaná jako znak tilda (~).
+
+
+---
+History
+
+0.25	2016-01-19
+	* point optimization: yen § mu paragraph AE ae
+	* tweaked: H Hbar (R) dbls Thorn eth summa Euro
+
+0.24	2016-01-18
+	* point optimization: % & perth PQ vw cent pound
+	* tweaked: (c)
+
+0.23	2016-01-15
+	* point optimization: "$@ BGJLMXYZ fgpqyz
+
+0.22	2016-01-12
+	* tweaked: B D E H U W b d k l m s supfour
+	+ AaIiOoUuGgHhKkj+caron SsTt+comma AaEe+dot
+	* 401 glyphs total
+
+0.21	2016-01-11
+	* tweaked margins of numbers and math symbols	
+	* tweaked connections of lower case characters
+	* tweaked A C 
+	* increased space width to 550
+	+ kerning: ML
+	+ Product Summa
+
+0.20	2016-01-08
+	* optimization of points
+	* lots of minor tweaks everywhere
+
+0.19	2016-01-07
+	* tweaked: E AE OE Oslash Thorn Lslash Eng Hbar
+	* tweaked: d l r eng
+	* optimization of lower case letters
+
+0.18	2016-01-06
+	+ infinity Delta
+	+ kerning: V+ocaron
+	* tweaked: b f h k p r w
+	* fixed diacritic: ocaron udieresis
+	* optimization of upper case letters
+
+0.17	2015-12-27
+	+ kerning: KL R+upper case K+space LL
+	* fixed some margins
+	* modified: Zacute Zcaron Zdot
+
+0.16	2015-12-23
+	* first public release
+	+ all Latin characters + diacritic marks
+	+ 506 kerning pairs (mostly uppercase)
+
+0.01	2015-12-06
+	+ first sketch
+

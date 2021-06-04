@@ -1,0 +1,9 @@
+{
+    "name": "planet-prototype",
+    "version": "0.0.1",
+    "description": "A chat demo for holochain",
+    "scripts": {
+      "hc:start:agent1": "holochain -c ./conductor-config-agent1.toml",
+      "hc:start:agent2": "holochain -c ./conductor-config-agent2.toml"
+    }
+}

@@ -1,0 +1,43 @@
+<div class="container mt-3">
+    <div class="d">
+        <h1 class="text-center text-light mb-5">{{user.username}}'s notes</h1>
+    </div>
+    <div class="row">
+        <div class="col-md-3 animated my-3">
+            <div class="card" style="opacity: 0.6;">
+                <div class="card-header">
+                    <h3>Add new note</h3>
+                </div>
+                <div class="card-body mx-auto text-center">
+                    <a href="/notes/add"><img src="add.png" class="w-50" id="icono"></a>
+                </div>
+            </div>
+        </div>
+        {{#each notes}}
+            <div class="col-md-3 animated fadeIn faster my-3">
+                <div class="card">
+                    <div class="card-header">
+                        <h3>{{titulo}}</h3>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-descripcion">
+                            {{descripcion}}
+                        </p>
+                        <hr>
+                        <div class="row">
+                            <div class="col-6">
+                                <a class="btn btn-primary btn-block text-light btn-sm" href="/notes/edit/{{_id}}">Edit</a>
+                            </div> 
+                            <div class="col-6">
+                                <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger btn-block text-light btn-sm">Delete</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

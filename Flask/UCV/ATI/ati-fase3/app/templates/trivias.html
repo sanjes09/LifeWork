@@ -1,0 +1,17 @@
+{% extends "layout-menu.html" %}
+{% block title %}
+    Trivias
+{% endblock %}
+{% block main %}
+    <div class="row mx-auto text-center mt-5 justify-content-center">
+        <div class="col-9">
+            <div class="row">
+                {% for trivia in trivias %}
+                    <a href="{{url_for('trivia', id=trivia._id)}}" style="background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url({{trivia.img}});" class="trivia col-12 col-lg-3 m-4">
+                        {{trivia.name}}
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

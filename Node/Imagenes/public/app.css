@@ -1,0 +1,17 @@
+body{
+    background-color: grey;
+}
+nav li {
+    display: inline-block;
+    margin-right: 1em;
+    font-size: 1.5em;
+}
+
+nav li a{
+    color: white;
+}
+
+nav li a:hover{
+    color: grey;
+    text-decoration: none;
+}

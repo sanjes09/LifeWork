@@ -1,0 +1,11 @@
+extends ./layout.jade
+block contenido
+	form(action="/reg", method="POST")
+		input(type="text", name="nombre", placeholder="nombre")
+		input(type="text", name="cedula", placeholder="cedula")
+		input(type="text", name="dir", placeholder="direccion")
+		input(type="password", name="password", placeholder="password")
+		input(type="password", name="password_confirmation", placeholder="password_confirmation")
+		input(type="text", name="sex", placeholder="sexo")
+		input(type="text", name="correo", placeholder="correo")
+		input(type="submit", name="submit")

@@ -1,0 +1,29 @@
+.user {
+    color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: .5em;
+    position: relative;
+    padding-left: 3em;
+    cursor: pointer;
+}
+.user:hover{
+    background-color: rgba(255,255,255,.1);
+}
+
+.user .text {
+    display: inline-block;
+}
+
+.user .circle {
+    background-color: #fff;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 2px;
+    color: #777;
+    text-align: center;
+    margin-right: 10px;
+}

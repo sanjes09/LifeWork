@@ -1,0 +1,35 @@
+A-A-5##Facultad de Odontología######1945-1953##Facultad de Odontología####A-A-5_OA-MUR-22.jpg##D
+OA-MUR-22##Fachadas edificio de Odontología##Carreño ##Omar##1957##Facultad de Odontología##Mosaicos vítreos industriales de 2 x 2 cm, Policromía##A-A-5_OA-MUR-22.jpg##D
+A-A-4##Facultad de Farmacia##Villanueva ##Carlos##1945-1953##Facultad de Farmacia####A-A-4_OA-MUR-30.jpg##D
+OA-MUR-30##Fachadas edificio de Farmacia##Otero ##Alejandro##1959##Facultad de Farmacia##Mosaicos vítreos industriales de 2x2cm, Policromía##A-A-4_OA-MUR-30.jpg##D
+A-A-3##Facultad de Ciencias##Villanueva ##Carlos##1935-1937##Facultad de Ciencias####A-A-3_OA-MUR-25.jpg##D
+OA-MUR-25##Sin Título##Manaure ##Mateo##1954##Facultad de Ciencias##   Planchas en cobre y aluminio pulido##A-A-3_OA-MUR-25.jpg##D
+A-A-6 ##Patio de Honor ##Villanueva ##Carlos##1945-1953 ##Plaza del Rectorado ####A-A-6.jpg##D
+OA-ESC-19 ##Torre del Reloj ##Villanueva ##Carlos##1953##Plaza del Rectorado ####OA-ESC-19.jpg##D
+A-A-2 ##Edificio Comunicaciones ##Villanueva ##Carlos##1945-1953##Plaza del Rectorado ####A-A-2.jpg##D
+OA-MUR-21 ##Sin Título ##Bloc ##André ##1954##Plaza del Rectorado ##Mosaicos vítreos artesanales venecianos ##OA-MUR-21.jpg##D
+OA-ESC-16 ##La Cultura ##Narváez##Francisco ##1954##Rectorado ##Bronce patinado ##OA-ESC-16.jpg##D
+OA-MUR-20 ##Sin Título ##Barrios ##Armando ##1953##Rectorado ##Mosaicos vítreos industriales de 2 x 2 cm ##OA-MUR-20.jpg##D
+OA-MUD-33 ##Composición Estática. Composición Dinámica ##Vigas ##Oswaldo ##1954##Rectorado ##Mosaicos artesanales venecianos ##OA-MUD-33.jpg##D
+A-A-9 ##Rectorado ##Villanueva ##Carlos##1945-1953##Rectorado ####A-A-9.jpg##D
+OA-MUR-23 ##Fechas Magnas de la Universidad ##Castro ##Pedro León ##1954##Rectorado ##Pintura al fresco ##OA-MUR-23.jpg##D
+OA-ESC-14 ##Amphion ##Laurens ##Henri ##1953##Rectorado ##Bronce patinado y pulido ##OA-ESC-14.jpg##D
+OA-MUR-24 ##Sin Título ##Léger ##Fernand ##1954##Rectorado ##Hormigón y mosaicos artesanales de 2 x 2 cm ##OA-MUR-24.jpg##D
+OA-MUR-28 ##Sin Título ##Navarro ##Pascual ##1954##Rectorado ##Hormigón y mosaicos vítreos de 2x2cm ##OA-MUR-28.jpg##D
+OA-MUR-31 ##Homenaje a Malévitch ##Vasarely ##Víctor ##1954##Rectorado ##Hormigón y cerámica esmaltada ##OA-MUR-31.jpg##D
+OA-ESC-13 ##Pastor de Nubes ##Arp## Jean ##1953##Rectorado ##Bronce patinado, bruñido y pulido ##OA-ESC-13.jpg##D
+OA-MUR-26 ##Sin Título ##Manaure ##Mateo ##1954##Rectorado ##Hormigón y cerámica esmaltada ##OA-MUR-26.jpg##D
+OA-ESC-17 ##El Dinamismo en 30 grados ##Pevsner ##Antoine ##1953##Rectorado ##Bronce patinado ##OA-ESC-17.jpg##D
+OA-ESC-15 ##Maternidad ##Lobo ##Baltazar ##1954##Tierra de Nadie ##Bronce patinado, con base en granito ##OA-ESC-15.jpg##D
+A-A-8 ##Paraninfo ##Villanueva ##Carlos ##1945-1953##Rectorado ####A-A-8_OA-MUR-27.jpg##D
+OA-MUR-27 ##Sin Título ##Manaure ##Mateo ##1954##Paraninfo ##Cerámica esmaltada ##A-A-8_OA-MUR-27.jpg##D
+OA-VIT-35 ##Sin Título ##Manaure ##Mateo ##1954##Paraninfo ##Hormigón y vidrio ##OA-VIT-35.jpg##D
+A-A-7 ##Plaza Cubierta ##Villanueva ##Carlos##1950-1953##Plaza entre Rectorado y Aula Magna ####A-A-7.jpg##D
+A-A-1 ##Aula Magna ##Villanueva ##Carlos##1945-1953##Rectorado ####A-A-1_OA-MUD-32.jpg##D
+OA-MUD-32 ##Sin Título ##González ##Carlos ##1953##Aula Magna ##Mosaicos vítreos industriales de 2 x 2 cm ##A-A-1_OA-MUD-32.jpg##D
+OA-ELP-11 ##Nubes Acústicas ##Calder ##Alexander ##1953##Aula Magna ##Metal y madera policromada ##OA-ELP-11.jpg##D
+OA-MUT-34 ##Sophia ##Vasarely ##Víctor ##1954##Aula Magna ##Cerámica esmaltada y concreto pintado ##OA-MUT-34.jpg##D
+A-A-10 ##Sala de Conciertos ##Villanueva ##Carlos##1945-1953##entre Aula Magna y Biblioteca Central ####A-A-10.jpg##D
+OA-ESC-18 ##Positivo - Negativo ##Vasarely ##Víctor ##1954##Sala de Conciertos ##Estructura en aluminio y hierro ##OA-ESC-18.jpg##D
+OA-ELP-12 ##Complementos Acústicos ##Manaure ##Mateo ##1954##Sala de Conciertos ##Madera bicromada ##OA-ELP-12.jpg##D
+OA-MUR-29 ##Variación en 36 Colores ##Oramas ##Alirio ##1954##Biblioteca Central ##Mosaicos vítreos industriales de 2x2cm##OA-MUR-29.jpg##D

@@ -1,0 +1,26 @@
+header {
+    /* background-color: rgb(199, 231, 231); */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .5em;
+    height: 4em;
+    border-bottom: 1px solid #ddd;
+    position:sticky;
+}
+.links {
+    display: inline-block;
+    margin: 8px 20px;
+}
+
+.link {
+    text-decoration: none;
+    margin: 10px;
+    font-size: 18px;
+    color: #5d5d5d;
+}
+
+.logo {
+    height: 3em;
+    margin-left: 40px;
+}

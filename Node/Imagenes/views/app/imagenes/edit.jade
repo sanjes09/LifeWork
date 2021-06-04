@@ -1,0 +1,6 @@
+extends ../../layout.jade
+block contenido
+    div(class="text-center pt-5")
+        form(action="/app/imagenes/#{imagen.id}?_method=PUT", method="POST")
+            input(type="text", name="titulo", placeholder="Titulo", value="#{imagen.titulo}")
+            input(type="submit", name="submit")

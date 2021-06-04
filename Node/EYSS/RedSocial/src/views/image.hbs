@@ -1,0 +1,100 @@
+<div class="row my-4">
+    <div class="col-8">
+        <div class="card border-0">
+            <div class="card-header text-light" style="background-color: #2969b3;">
+                <h3 class="card-title">
+                    My Images
+                </h3>
+            </div>
+            <div class="card-body">
+                <div class="card mb-4">
+                    <div class="card-header text-light" style="background-color: #1a416e;">
+                    </div>
+                    <div class="card-body" style="background-color: #d1d1d1;">
+                        <h3>
+                            {{imagen.title}}
+                        </h3>
+                        <hr>
+                        <a href="/images/{{imagen._id}}">
+                            <img src="../public/upload/{{imagen.filename}}" alt="" class="w-100 h-100">
+                        </a>
+                        <hr>
+                        <div class="row">
+                            <div class="col-3 d-flex">
+                                <button class="btn btn-success btn-sm mr-1 btn-like" data-id="{{imagen._id}}">&#x21e7</button>
+                                <button class="btn btn-danger btn-sm btn-unlike" data-id="{{imagen._id}}">&#x21e9</button>
+                            </div>
+                            <div class="col-3">
+                                <label>&#9825 Likes: <span id="likes-count-{{imagen._id}}">{{imagen.likes}}</span></label>
+                            </div>
+                            <div class="col-3">
+                                <label>&#9903 Viewes: <span>{{imagen.views}}</span></label>
+                            </div>
+                            <div class="col-3">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mt-2">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h3>Post a Comment</h3>
+                <button class="btn btn-info" id="btn-toggle-comment">Post a comment</button>
+            </div>
+            <div class="card-body" id="comentario" style="display: none;">
+                <blockquote>
+                    <form action="/images/{{imagen._id}}/comment" method="POST">
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name" placeholder="Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-control" name="email" placeholder="email">
+                        </div>
+                        <div class="form-group">
+                            <textarea name="comment" class="form-control" placeholder="Your Comment..." rows="2"></textarea>
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success" id="btn-comment" type="submit">Post</button>
+                        </div>
+                    </form>
+                </blockquote>
+            </div>
+        </div>
+        <div class="card mt-2">
+            <ul class="list-group p-4">
+                <h3>Comments</h3>
+                {{#each comments}}
+                    <li class="list-group-item">
+                        <div class="row">
+                            <a href="" class="col-2 text-center">
+                                <img src="http://gravatar.com/avatar/{{gravatar}}?d=monsterid&s=45" alt="">
+                            </a>
+                            <blockquote class="col-10">
+                                <p class="lead">
+                                    {{comment}}
+                                </p>
+                                <footer class="blockquote-footer">
+                                    {{name}} - {{tiempo timestamp}}
+                                </footer>
+                            </blockquote>
+                        </div>
+                    </li>
+                {{/each}}
+            </ul>
+        </div>
+    </div>
+    <div class="col-4">
+        <div class="card border-0">
+            <div class="card-header text-light" style="background-color: #2969b3;">
+                <h3 class="card-title">
+                    Stats
+                </h3>
+            </div>
+            <div class="card-body">
+
+            </div>
+        </div>
+    </div>
+</div>

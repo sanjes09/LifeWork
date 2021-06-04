@@ -1,0 +1,47 @@
+{% extends "layout-menu.html" %}
+
+{% block main %}
+    <div class="box_shadow mt-5 p-5">
+        <h2 class="text-center">Crear nueva trivia</h2>
+        <form id="trivia-new" method="POST" action="/crearTrivia" enctype="multipart/form-data">
+            <div class="row pt-3 pl-3 pr-3">
+                <div class="form-group col-12">
+                    <label for="name">Nombre de categoría</label>
+                    <input type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="Deportes"
+                        value="{{name_category}}" required>
+                </div>
+                <div class="form-group col-12">
+                    <label for="file-trivia">Cambiar imágen</label>
+                    <input type="file" class="form-control-file" name="img" id="file-trivia" required>
+                </div>
+            </div>
+            <hr>
+            <div class="row pt-3 pl-5 pr-5">
+                <h4 class="col-12">Preguntas:</h4>
+                <span id="add-question"></span>
+                <hr>
+                <div class="col-12 pr-5 pl-5">
+                    <button type="button" class="btn text-light d-block" style="background-color: #7F7FD5; height: 40px;" id="addquestion">
+                        <i class="fa fa-plus" aria-hidden="true"></i> Agregar otra pregunta
+                    </button>
+                </div>
+            </div> -->
+        </form>
+        <div class="row pt-3 pl-3 pr-3">
+            <button type="submit" form="trivia-new" class="btn col-12 text-light" style="background-color: #7F7FD5; width: 100px; height: 40px;">
+                Crear trivia
+            </button>
+        </div>
+    </div>
+    <br>
+{% endblock %}
+<!-- 
+{% block javascript %}
+<script>
+    let question= '<div class="form-group"><label for="file-question">Cambiar imágen/audio</label><input type="file" class="form-control-file" name="file" id="file-question" required></div><div class="form-group col-12"><label for="name">Pregunta</label><input type="text" class="form-control" id="question" name="question" aria-describedby="question" placeholder="¿Pregunta?" value="{{question}}" required></div><br><div class="form-group col-12"><label for="name">Respuesta correcta</label><input type="text" class="form-control" id="ans0" name="ans0" aria-describedby="cor" placeholder="Respuesta" value="{{cor}}" required></div><div class="form-group col-12"><label for="name">Respuestas Incorrectas</label><input type="text" class="form-control" id="ans1" name="ans1" aria-describedby="inco" placeholder="Respuesta" value="{{irco}}" required><br><input type="text" class="form-control" id="ans2" name="ans2" aria-describedby="inco" placeholder="Respuesta" value="{{inco}}" required><br><input type="text" class="form-control" id="ans3" name="ans3" aria-describedby="inco" placeholder="Respuesta" value="{{inco}}" required></div><hr>';
+
+    $("#addquestion").click( function (){
+        $("#add-question").append(question);
+    });
+</script>
+{% endblock %} -->

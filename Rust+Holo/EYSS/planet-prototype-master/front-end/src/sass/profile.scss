@@ -1,0 +1,84 @@
+$main-colour : #2c61af;
+
+.profile{
+    height: calc(100vh - 4em);
+    overflow-y: auto;
+    .top-part{
+        display: flex;
+        .img-holder{
+            width: 16%;
+            h3{
+                text-align: center;
+            }
+            .img-uploader{
+                .drop-section{
+                    position: relative;
+                }
+                img{
+                    width: 70%;
+                    margin-left: 15%;
+                }
+            }
+        }
+        .top-text{
+            width: 84%;
+            padding: 2em;
+            position: relative;
+            .trust{
+                display: flex;
+                width: 100%;
+                margin-bottom: 1em; 
+                .confidence{
+                    flex-grow: 1;
+                    margin-left: 1em;
+                    box-sizing: content-box;
+                    background-color: rgba(230, 230, 230, 0.521);
+                    position: relative;
+                    height: 1.4em;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    .inner-progress{
+                        position: absolute;
+                        height: 100%;
+                        left: 0;
+                        background-color: rgb(0, 38, 255);
+                    }
+                }
+            }
+            .tags{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+                span{
+                    padding: .5em;
+                    margin-right: 1em;
+                    border-radius: 5px;
+                    margin-bottom: .5em;
+                    border:1px solid rgb(104, 243, 139);
+                    cursor: pointer;
+                    transition-duration: .3s;
+                    &:hover{
+                        background-color: rgb(104, 243, 139);
+                    }
+                }
+            }
+            .description{
+                textarea{
+                    width: 100%;
+                    margin-top: 1em;
+                    min-height: 7em;
+                    padding: .3em;
+                    outline: none;
+                    border: 1px solid silver;
+                    resize: none;
+                    font-family: inherit;
+                    font-size: 1em;
+                }
+            }
+        }
+    }
+    .bottom-section{
+        min-height: 40vh;
+    }
+}

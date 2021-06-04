@@ -1,0 +1,34 @@
+{% extends "layout-login.html" %}
+
+{% block titlefav %}
+    Recuperar
+{% endblock %}
+
+{% block title %}
+    Recuperar Contraseña
+{% endblock %}
+
+{% block content %}
+    
+    <div class="row m-5">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form id="login" method="POST" action="">
+                <div class="form-group">
+                    <label for="user"><i class="fa fa-envelope" aria-hidden="true"></i> Correo</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailPass" placeholder="correo@ejemplo.com">
+                    <small id="email" class="form-text text-muted">Se enviará una nueva contraseña a su correo.</small>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">
+                    <i class="fa fa-paper-plane" aria-hidden="true"></i> Enviar
+                </button>
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+        <span class="col-md-3"></span>
+        <a class="col-md-6" href="{{url_for('login')}}"><span class=" float-right"><i class="fa fa-sign-in" aria-hidden="true"></i> Ingresar</span></a>
+        <span class="col-md-3"></span>
+    </div>
+{% endblock %}

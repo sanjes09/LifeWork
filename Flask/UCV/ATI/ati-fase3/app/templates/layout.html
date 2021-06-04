@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="shortcut icon" href="{{url_for('static', filename= 'img/logo-white.png')}}" type="image/x-icon">
+        <title>Falcs</title>
+
+         <!-- Bootstrap 4 CSS CDN -->
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="{{url_for('static', filename= 'css/bootstrap.min.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename= 'css/font-awesome.min.css')}}">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="{{url_for('static', filename= 'css/nav.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename= 'css/animate-trivia.css')}}">
+        <link rel="stylesheet" href="{{url_for('static', filename= 'css/countdown.css')}}">
+    </head>
+    <body>
+        <div class="wrapper">
+            
+            <!-- Sidebar Holder -->
+            <nav id="sidebar">
+                <div class="sidebar-header">
+                    <a href="{% block index %}{% endblock %}">
+                        <img src="{{url_for('static', filename= 'img/logo-white.png')}}" width="100" height="100" style="border-radius: 20%;" alt="Logo">
+                    </a>
+                    <br>
+                    <a href="{{url_for('profile', id=session['id'])}}">
+                        <h4>
+                        <i class="fa fa-user" aria-hidden="true"></i> {{session["username"]}}
+                        </h4>
+                    </a>
+                </div>
+
+                <ul class="list-unstyled components">
+                    {% block menu %}
+                    {% endblock %}
+                </ul>
+                <a class="btn d-block text-light" href="{{url_for('logout')}}" style="background-color:  #7F7FD5;">
+                    <i class="fa fa-sign-out" aria-hidden="true"></i> Cerrar sesión
+                </a>
+            </nav>
+            
+            <!-- Page Content Holder -->
+            <div id="content" class="container-fluid">
+                <div class="row text-light" style="box-shadow: 0px 0px 5px 0px #bdbdbd; background-color:  #ffbd59;">
+                    <div class="container-fluid">
+                        <div class="row mb-3">
+                            <div class="col-md-3" style="position: absolute; z-index: 5;">
+                                <br>
+                                <button type="button" id="sidebarCollapse" class="navbar-toggler mb-3" data-toggle="collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                                    <span class="navbar-toggler-icon"></span>
+                                    <span class="navbar-toggler-icon"></span>
+                                    <span class="navbar-toggler-icon"></span>
+                                </button>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <br>
+                                <h2>FALCS QUESTIONS</h2>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-fluid">
+                    {% block main %}
+                    {% endblock %}
+                </div>
+                <footer class="text-center text-light fixed-bottom py-1" style="box-shadow: 0px 5px 0px 0px #bdbdbd; background-color: #ffbd59;">
+                    Copyright <a href="{{url_for('index')}}"><b>Falcs Questions</b></a> 2019
+                </footer>
+            </div>
+        </div>
+
+        <div>
+            {% block modal %}
+            {% endblock %}
+        </div>
+
+
+        <!-- Font Awesome -->
+        <!-- <script src="https://use.fontawesome.com/3bec889d15.js"></script> -->
+
+        <!-- jQuery CDN -->
+         <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script> -->
+         <script src="{{url_for('static', filename= 'js/jquery.min.js')}}"></script>
+         <!-- Bootstrap Js CDN -->
+        <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+        <script src="{{url_for('static', filename= 'js/bootstrap.min.js')}}"></script>
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> -->
+        <script src="{{url_for('static', filename= 'js/script.js')}}" type="text/javascript"></script>
+        <script src="{{url_for('static', filename= 'js/jquery.countdown.min.js')}}" type="text/javascript"></script>
+        <!--<script src="{{url_for('static', filename= 'js/countdown.js')}}" type="text/javascript"></script>
+        <script src="{{url_for('static', filename= 'js/animate-trivia.js')}}" type="text/javascript"></script>-->
+        {% block javascript %}
+        {% endblock %}
+    </body>
+</html>

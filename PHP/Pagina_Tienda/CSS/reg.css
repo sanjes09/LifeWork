@@ -1,0 +1,186 @@
+*{
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body{
+	background: url(../Img/wth.png);
+	font-family: 'Modern Antiqua', cursive;
+}
+
+.contenedor{
+	width: 60%;
+	background: #DBD8D9;
+	margin: 7% auto;
+	padding: 20px;
+	border-radius: 5px;
+	border: 2px solid #EDEDED;
+	align-items: center;
+	text-align: center;
+}
+
+
+/*TITULO*/
+
+h1{
+	margin-bottom: 20px;
+	color: #f2f2f2;
+}
+
+/*DATOS*/
+
+input{
+	background: #EDEDED;
+	margin: 5px;
+	padding: 10px;
+	border-radius: 3px;
+	border: 2px solid #AFADAE;
+	color: #504F50;
+}
+
+/*HOMBRE Y MUJER*/
+
+label{
+	color: #504F50;
+}
+
+/*TERMINOS Y CONDICIONES*/
+
+p{
+	color: #504F50;
+	display: inline;
+}
+
+/*DATOS*/
+
+input[type="text"],
+input[type="email"],
+input[type="password"]{
+	width: 40%;
+	font-size: 18px;
+}
+
+/*BOTON*/
+
+input[type="submit"]{
+	width: 20%;
+	padding: 5px;
+	margin-top: 20px;
+	font-size: 18px;
+	color: #504F50;
+}
+
+/*INICIO*/
+
+a{
+	text-decoration: none;
+	color:#7E7E7E;
+}
+
+/*CAMBIO DE COLOR DE BORDES*/
+
+input[type="text"]:hover,
+input[type="email"]:hover,
+input[type="password"]:hover,
+input[type="submit"]:hover{
+	border: 2px solid #7E7E7E;
+}
+
+/*CAMBIO DE COLOR DEL ENLACE*/
+
+a:hover{
+	color: #c7c7c7;
+}
+
+a:focus{
+	color: #ececec;
+}
+
+/*RESPONSIVE DESING*/
+
+@media screen and (max-width: 810px) {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"]{
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 760px) {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"]{
+		font-size: 14px;
+	}
+}
+
+@media screen and (max-width: 680px) {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"]{
+		display: block;
+		width: 70%;
+		font-size: 18px;
+		margin: 5px auto;
+	}
+
+	input[type="submit"]{
+		width: 30%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="submit"]{
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 410px) {
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"]{
+		display: block;
+		width: 80%;
+		font-size: 14px;
+		margin: 5px auto;
+	}
+
+	input[type="submit"]{
+		width: 40%;
+		font-size: 16px;
+	}
+}
+
+@media screen and (max-width: 380px) {
+
+	.contenedor{
+		width: 70%;
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"]{
+		display: block;
+		width: 90%;
+		font-size: 14px;
+		margin: 5px auto;
+	}
+}
+
+@media screen and (max-width: 380px) {
+
+	.contenedor{
+		width: 80%;
+	}
+}

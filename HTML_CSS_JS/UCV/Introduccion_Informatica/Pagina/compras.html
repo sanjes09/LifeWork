@@ -1,0 +1,303 @@
+<!doctype html>
+<html>
+<head>
+<link rel="icon" type="image/png" href="pictures/favicon.png">
+<link rel="stylesheet" href="css/pagina.css" />
+<script src="js/jQuery.js"></script>
+<script src="js/adsRotator.js"></script>
+<script src="js/carrito.js"></script>
+<meta charset="utf-8">
+<title>La Bahía del Libro</title>
+</head>
+<body>
+<div id="header"><img src="pictures/bookbaybanner.png" alt="bookbay" style="width:100%;height:220px;"></div>
+<ul class="menu">
+  <li><a href="index.html"><img src="pictures/home.png" alt=home style="width: 24px; height: 24px;"/> Home</a></li>
+  <li class="desplegar">
+    <a href="#" class="botondes"><img src="pictures/avatar.png" alt=contact us style="width: 24px; height: 24px;"/> Contáctanos</a>
+    <div class="desp-content">
+        <a href="#">Antonella Requena Tlf:+584242354646</a>
+        <a href="#">Jesús Martínez Tlf:+584145689657</a>
+        <a href="#">Twitter: @BahiaDelLibro</a>
+        <a href="#">Facebook: La Bahia del Libro</a>
+    </div>
+  </li>
+  <li class="desplegar">
+    <a href="#" class="botondes"><img src="pictures/shapes.png" alt=generos style="width: 24px; height: 24px;"/> Géneros</a>
+    <div class="desp-content">
+      <a href="#biografico">Biográfico</a>
+      <a href="#ficcion">Ficción</a>
+      <a href="#horror">Horror</a>
+      <a href="#infantil">Infantil</a>
+      <a href="#suspenso">Suspenso</a>
+    </div>
+  </li>
+  <li class="comprar"><img src="pictures/commerce.png" alt=home style="width: 28px; height: 28px; padding: 8px;"/></li>
+</ul>
+
+<img src="pictures/oferta.png" alt=flyer style="width:280px; height:280px; display: scroll; position: fixed; left:10px; top:320px;">
+
+<div id="content-carrito3" style="right:1px; bottom:47%;">
+  <p style="text-align: center;"><big><strong>Carrito de compras</strong></big></p>
+  <ul sytle="display: inline block;">
+    <li><label><big>Producto &nbsp;&nbsp;</big></label></li><li><label><big>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Precio</big></label></li>
+  </ul> 
+</div>
+
+<div id="content-carrito" style="right:15px; bottom:3%;"> 
+  <table id="tablaTotal">
+     <tr>
+      <td></td>
+      <td></td>
+     </tr>
+  </table>
+ </div>
+<div id="content-carrito2" style="right:1px; bottom:1%;">
+<table >
+    <tr >
+    <td ><label>Subtotal: </label><label id="Subtotal" style="margin-left:50%">0</label></td>
+    <td ><label>IVA: </label><label id="IVA" style="margin-left:50%">0</label></td>
+    <td ><label>Descuento: </label><label id="descu" style="margin-left:50%">0</label><label>%</label></td>
+    </tr>
+    <tr >
+    <td ><label>Total: </label><label id="Total" style="margin-left:50%">0</label></td>
+    <td ><button type="button" onclick="alerta()">Comprar</button></td>
+    </tr>
+</table>
+</div>
+<div id="mainwrapper" style="min-width:30%;	max-width:55%;">
+<h2>Catálogos</h2>
+   <h3><a name=biografico>Biográfico</a></h3>
+     <table>
+    <tr>
+      <td><img id="imglista" src="pictures/chiabe.jpg" alt="chavez"></td>
+      <td><label>Hugo Chávez sin Uniforme: Una historia real</label></td>
+      <td><label>Cristina Marcano, Alberto Barrera Tyszka</label></td>
+      <td><label style="float:right;">Precio: 150Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(1)" style="float:right">Añadir al carrito</button>     
+    </tr>
+    <tr>
+      <td><img id="imglista" src="pictures/frida.jpg" alt="frida"></td>
+      <td><label>Frida: Una Biografía De Frida Kahlo</label></td>
+      <td><label>Hayden Herrera</label></td>
+      <td><label style="float:right;">Precio: 200Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(2)" style="float:right">Añadir al carrito</button>     
+    </tr> 
+    <tr>
+      <td><img id="imglista" src="pictures/jobs.jpg" alt="jobs"></td>
+      <td><label>Steve Jobs</label></td>
+      <td><label>Walter Isaacson</label></td>
+      <td><label style="float:right;">Precio: 300Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(3)" style="float:right">Añadir al carrito</button>     
+    </tr>   
+    <tr>
+      <td><img id="imglista" src="pictures/milucha.jpg" alt="milucha"></td>
+      <td><label>Mi Lucha</label></td>
+      <td><label>Adolf Hitler</label></td>
+      <td><label style="float:right;">Precio: 200Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(4)" style="float:right">Añadir al carrito</button>     
+    </tr>
+    <tr>
+      <td><img id="imglista" src="pictures/eatpraylove.jpg" alt="eatpraylove"></td>
+      <td><label>Eat, Pray, Love</label></td>
+      <td><label>Elizabeth Gilbert</label></td>
+      <td><label style="float:right;">Precio: 250Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(5)" style="float:right">Añadir al carrito</button>     
+    </tr>
+    <tr>
+      <td><img id="imglista" src="pictures/kurt.jpg" alt="kurt"></td>
+      <td><label>Kurt Cobain: La Biografía</label></td>
+      <td><label>Charles R. Cross</label></td>
+      <td><label style="float:right;">Precio: 250Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(6)" style="float:right">Añadir al carrito</button>     
+    </tr>
+  </table>
+  <h3><a name=ficcion>Ficción</a></h3>
+     <table>
+    <tr>
+      <td><img id="imglista" src="pictures/davinci.jpg" alt="davincicode"></td>
+      <td><label>El Código Da Vinci</label></td>
+      <td><label>Dan Brown</label></td>
+      <td><label style="float:right;">Precio: 200Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(7)" style="float:right">Añadir al carrito</button>     
+    </tr>
+    <tr>
+      <td><img id="imglista" src="pictures/goodliar.jpg" alt="goodliar"></td>
+      <td><label>The good liar</label></td>
+      <td><label>Nicholas Searle</label></td>
+      <td><label style="float:right;">Precio: 250Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(8)" style="float:right">Añadir al carrito</button>     
+    </tr> 
+    <tr>
+      <td><img id="imglista" src="pictures/gosetaw.jpg" alt="gosetaw"></td>
+      <td><label>Ve y pon un centinela</label></td>
+      <td><label>Harper Lee</label></td>
+      <td><label style="float:right;">Precio: 250Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(9)" style="float:right">Añadir al carrito</button>     
+    </tr>   
+    <tr>
+      <td><img id="imglista" src="pictures/hunger.jpg" alt="thg"></td>
+      <td><label>Los Juegos del Hambre (Trilogía completa)</label></td>
+      <td><label>Suzanne Collins</label></td>
+      <td><label style="float:right;">Precio: 450Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(10)" style="float:right">Añadir al carrito</button>     
+    </tr>
+    <tr>
+      <td><img id="imglista" src="pictures/tokilla.jpg" alt="tokilla"></td>
+      <td><label>Matar a un ruiseñor</label></td>
+      <td><label>Harper Lee</label></td>
+      <td><label style="float:right;">Precio: 300Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(11)" style="float:right">Añadir al carrito</button>     
+    </tr>
+    <tr>
+      <td><img id="imglista" src="pictures/jumper.jpg" alt="jumper"></td>
+      <td><label>Jumper</label></td>
+      <td><label>Steven Gould</label></td>
+      <td><label style="float:right;">Precio: 250Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(12)" style="float:right">Añadir al carrito</button>     
+    </tr>
+  </table>
+  
+   <h3><a name=horror>Horror</a></h3>
+  <table>
+    <tr>
+      <td><img id="imglista" src="pictures/carrie.jpg" alt="carrie"></td>
+      <td><label>Carrie</label></td>
+      <td><label>Stephen King</label></td>
+      <td><label style="float:right;">Precio: 200Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(13)" style="float:right">Añadir al carrito</button>     
+    </tr>
+    <tr>
+      <td><img id="imglista" src="pictures/cthulhu.jpg" alt="Cthulhu"></td>
+      <td><label>La Llamada De Cthulhu</label></td>
+      <td><label>H.P. Lovecraft</label></td>
+      <td><label style="float:right;">Precio: 150Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(14)" style="float:right">Añadir al carrito</button>     
+    </tr> 
+    <tr>
+      <td><img id="imglista" src="pictures/dracula.jpg" alt="dracula"></td>
+      <td><label>Drácula</label></td>
+      <td><label>Bram Stoker</label></td>
+      <td><label style="float:right;">Precio: 150Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(15)" style="float:right">Añadir al carrito</button>     
+    </tr>   
+    <tr>
+      <td><img id="imglista" src="pictures/eso.jpg" alt="eso"></td>
+      <td><label>It (Eso)</label></td>
+      <td><label>Stephen King</label></td>
+      <td><label style="float:right;">Precio: 250Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(16)" style="float:right">Añadir al carrito</button>     
+    </tr>
+    <tr>
+      <td><img id="imglista" src="pictures/wwz.jpg" alt="wwz"></td>
+      <td><label>Guerra Mundial Z</label></td>
+      <td><label> Max Brooks</label></td>
+      <td><label style="float:right;">Precio: 200Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(17)" style="float:right">Añadir al carrito</button>     
+    </tr>
+    <tr>
+      <td><img id="imglista" src="pictures/thestrain.jpg" alt="thestrain"></td>
+      <td><label>La oscuridad (Trilogía completa)</label></td>
+      <td><label>Guillermo Del Toro</label></td>
+      <td><label style="float:right;">Precio: 470Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(18)" style="float:right">Añadir al carrito</button>     
+    </tr>
+  </table>
+  
+   <h3><a name=infantil>Infantil</a></h3>
+  <table>
+    <tr>
+      <td><img id="imglista" src="pictures/elgatodelsombrero.jpg" alt="elgatodelsombrero"></td>
+      <td><label>El Gato Ensombrerado</label></td>
+      <td><label>Dr. Seuss</label></td>
+      <td><label style="float:right;">Precio: 220Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(19)" style="float:right">Añadir al carrito</button>     
+    </tr>
+    <tr>
+      <td><img id="imglista" src="pictures/elqueso.jpg" alt="El Queso"></td>
+      <td><label>El Queso</label></td>
+      <td><label>Margie Palatini</label></td>
+      <td><label style="float:right;">Precio: 150Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(20)" style="float:right">Añadir al carrito</button>     
+    </tr> 
+    <tr>
+      <td><img id="imglista" src="pictures/portada-miguel-luna-contra-bestia-bosque.jpg" alt="miguelluna"></td>
+      <td><label>Miguel Luna contra la bestia del Bosque</label></td>
+      <td><label>Fedosy Santaella</label></td>
+      <td><label style="float:right;">Precio: 200Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(21)" style="float:right">Añadir al carrito</button>     
+    </tr>   
+    <tr>
+      <td><img id="imglista" src="pictures/mecomiunpie.jpg" alt="me comi un pie"></td>
+      <td><label>Una vez me comí un pay</label></td>
+      <td><label>Patricia y Emily MacLachlan</label></td>
+      <td><label style="float:right;">Precio: 125Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(22)" style="float:right">Añadir al carrito</button>     
+    </tr>
+    <tr>
+      <td><img id="imglista" src="pictures/principito.jpg" alt="El principito.jpg"></td>
+      <td><label>El Principito</label></td>
+      <td><label>Antoine De Saint-Exupery</label></td>
+      <td><label style="float:right;">Precio: 200Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(23)" style="float:right">Añadir al carrito</button>     
+    </tr>
+    <tr>
+      <td><img id="imglista" src="pictures/reymocho.jpg" alt="rey mocho"></td>
+      <td><label>El Rey Mocho</label></td>
+      <td><label>Carmen Berenguer</label></td>
+      <td><label style="float:right;">Precio: 150Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(24)" style="float:right">Añadir al carrito</button>     
+    </tr>
+  </table>
+  
+  <h3><a name=suspenso>Suspenso</a></h3>
+  <table>
+    <tr>
+      <td><img id="imglista" src="pictures/lachicadeltren.jpg" alt="La chica del tren"></td>
+      <td><label>La chica del tren</label></td>
+      <td><label>Paula Hawkins</label></td>
+      <td><label style="float:right;">Precio: 300Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(25)" style="float:right">Añadir al carrito</button>     
+    </tr>
+    <tr>
+      <td><img id="imglista" src="pictures/esfera.jpg" alt="esfera"></td>
+      <td><label>Esfera</label></td>
+      <td><label>Crichton</label></td>
+      <td><label style="float:right;">Precio: 300Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(26)" style="float:right">Añadir al carrito</button>     
+    </tr> 
+    <tr>
+      <td><img id="imglista" src="pictures/fortalezadigital.jpg" alt="Fortaleza"></td>
+      <td><label>La Fortaleza Digital</label></td>
+      <td><label>Dan Brown</label></td>
+      <td><label style="float:right;">Precio: 250Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(27)" style="float:right">Añadir al carrito</button>     
+    </tr>   
+    <tr>
+      <td><img id="imglista" src="pictures/shining.jpg" alt="The shining"></td>
+      <td><label>El Resplandor</label></td>
+      <td><label>Stephen King</label></td>
+      <td><label style="float:right;">Precio: 250Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(28)" style="float:right">Añadir al carrito</button>     
+    </tr>
+    <tr>
+      <td><img id="imglista" src="pictures/tormentadearena.jpg"alt="Sandstorm"></td>
+      <td><label>Tormenta de Arena</label></td>
+      <td><label>James Rollin</label></td>
+      <td><label style="float:right;">Precio: 300Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(29)" style="float:right">Añadir al carrito</button>     
+    </tr>
+    <tr>
+      <td><img id="imglista" src="pictures/zombieroom.jpg" alt="zombi"></td>
+      <td><label>El Cuarto Zombi</label></td>
+      <td><label>R.D. Ronald</label></td>
+      <td><label style="float:right;">Precio: 300Bs</label></td>
+      <td><button type="button" value="addtocart" onclick="addToCart(30)" style="float:right">Añadir al carrito</button>     
+    </tr>
+  </table>
+</div>
+<footer>
+	Copyright © 2016, La Bahía del Libro - Desarrollado por Antonella Requena y Jesús Martínez
+</footer>
+</body>
+</html>

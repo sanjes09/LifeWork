@@ -1,0 +1,13 @@
+perfil = {	
+	"nombre":"Jesús Santiago Martínez Bello",
+	"descripcion":"Estudiante de computacion de la UCV, trabajador de Joyacorp.",
+	"color":"Morado.",
+	"libro":"Jumper.",
+	"musica":"Rock.",
+	"video_juego":["Need for speed","Crysis"],
+	"lenguajes":["Java", "C/C++", "PHP", "JavaScript"],
+	"email":"sanjes09@gmail.com",
+	"ci":"21194440",
+	"genero":"Masculino",
+	"fecha_nacimiento":"19/09/1994"
+}

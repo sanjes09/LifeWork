@@ -1,0 +1,20 @@
+<div class="col-md-4 mx-auto mt-4 animated slideInDown faster">
+    <div class="card">
+        <div class="card-header">
+            <h3>New Note</h3>
+        </div>
+        <div class="card-body">
+            <form action="/notes/new-note" method="POST">
+                <div class="form-group">
+                    <input type="text" name="titulo" class="form-control" placeholder="Titulo" autofocus required>
+                </div>
+                <div class="form-group">
+                    <textarea name="descripcion" class="form-control" placeholder="Descripcion" cols="30" rows="5" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

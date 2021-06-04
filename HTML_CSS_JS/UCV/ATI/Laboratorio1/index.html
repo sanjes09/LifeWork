@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Lab1 ATI</title>
+	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+</head>
+<body align="Center" bgcolor="#002233">
+	<header><img src="imagen.jpg" width="500" height="200"/></header>
+	<h1><font color="#AAA1" size="20">Post-Laboratorio 1</font></h1>
+	<table align="Center" bgcolor="#336699">
+		<tr>
+		<td>
+		<form>
+			<br><b>Nombre: </b><input type="text" name="Nombre" maxlength="20" minlength="4"pattern="[a-zA-Z]*" required><br>
+			<br><b>Apellido: </b><input type="text" name="Apellido" maxlength="20" minlength="4" pattern="[a-zA-Z]*" required><br>
+			<br><b>Correo: </b><input type="email" name="Correo" required><br>
+			<br><b>Cédula: </b><input type="number" name="Cedula" max=99999999 required><br>
+			<br><b>Contraseña: </b><input type="password" name="Contraseña" required><br>
+			<br><b>Genero: </b>
+				<select name="Genero" required>
+				   <option value="Masculino">Masculino</option> 
+				   <option value="Femenino">Femenino</option>
+				</select><br>
+			<br><b>Breve descripción: </b><br><textarea rows="5" cols="80" name="Descripcion" required></textarea><br>
+			<br><b>Cargar una imagen: </b><input type="file" name="foto" required><br>
+			<br><b>Lenguajes aprendidos: </b>
+			<table align="Center" bgcolor="#336699">
+				<tr>
+					<td><input type="checkbox" name="PHP">PHP</td>
+					<td><input type="checkbox" name="Java">JAVA</td>
+					<td><input type="checkbox" name="C">C/C++</td>
+				</tr>
+				<tr>
+					<td><input type="checkbox" name="JS">JavaScript</td>
+					<td><input type="checkbox" name="Python">Python</td>
+					<td><input type="checkbox" name="Haskell">Haskell</td>
+				</tr>
+			</table>
+			<br>
+			<b>Gustos personales:</b><br>
+			<br><b>¿Cuál es tu color favorito?: </b><input type="text" name="Color" required><br>
+			<br><b>¿Cuál es tu libro favorito?: </b><input type="text" name="Libro" required><br>
+			<br><b>¿Cuál es tu estilo de música preferida?: </b><input type="text" name="Musica" required><br>
+			<br><b>¿Te consideras un Gamer?: </b><input type="radio" name="Gamer" value="Si">Si
+			<input type="radio" name="Gamer" value="No">No<br>
+			<br><b>¿Cuáles son tus videojuegos favoritos?: </b><br>
+			<textarea rows="5" cols="80" name="Juegos" required></textarea>
+			<br>
+			<input type="submit" name="Enviar" value="Enviar">
+			<br>
+			<br>
+		</form>
+		</td>
+		</tr>
+	</table>
+	<br>
+	<footer>
+		<font color="#FA4AC66"><i>Copyright Jesús Santiago Martínez Bello<br>Si necesitan comunicarse conmigo me pueden escribir a: </i><a href="mailto:sanjes09@gmail.com">sanjes09@gmail.com</a></font>
+	</footer>
+</body>
+</html>

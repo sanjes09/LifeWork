@@ -1,0 +1,50 @@
+{% extends "layout-premios.html" %}
+
+{% block main %}
+    {% if is_admin == True %}
+        {% set href_draws = url_for('sorteos_admin') %}
+        {% set href_snapshots = url_for('snapshots_admin') %}
+    {% else %}
+        {% set href_draws = url_for('sorteos') %}
+        {% set href_snapshots = url_for('snapshots') %}
+    {% endif %}
+    <div class="row text-center mt-5 mb-5">
+        <div class="col-6"></div>
+        <select class="browser-default custom-select col-6 float-right">
+            <option value="" selected>Seleccione una fecha</option> 
+            <option value="value2">Fecha 1</option>
+            <option value="value3">Fecha 2</option>
+            <option value="value4">Fecha 3</option>
+        </select>
+        <div class="col-2"></div>
+    </div>
+    <div class="row text-center" style="height:400px !important">
+        <div class="col-4 media justify-content-center">
+            <span class="align-self-top">
+                1°
+                <br/>
+                <img src="https://picsum.photos/id/1/200/200" alt="">
+                <br/>
+                Lugar
+            </span>
+        </div>
+        <div class="col-4 media justify-content-center">
+            <span class="align-self-center">
+                2°
+                <br/>
+                <img src="https://picsum.photos/id/2/200/200" alt="">
+                <br/>
+                Lugar
+            </span>
+        </div>
+        <div class="col-4 media justify-content-center">
+            <span class="align-self-end">
+                3°
+                <br/>
+                <img src="https://picsum.photos/id/3/200/200" alt="">
+                <br/>
+                Lugar
+            </span>
+        </div>
+    </div>
+{% endblock %}

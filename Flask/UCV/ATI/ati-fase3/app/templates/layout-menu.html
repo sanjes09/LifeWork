@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block index %}
+    {% if session["user"] == "admin" %}
+        {{url_for('admin')}}
+    {% else %}
+        {{url_for('index')}}
+    {% endif %}
+{% endblock %}
+
+{% block profile %}
+    {{url_for('profile')}}
+{% endblock %}
+
+{% block menu %}
+    {% if session["type"] == "admin" %}
+        <li>
+            <a href="{{url_for('admin')}}">
+                <i class="fa fa-home" aria-hidden="true"></i> Inicio
+            </a>
+        </li>
+        <li>
+            <a href="{{url_for('search_user')}}">
+                <i class="fa fa-users" aria-hidden="true"></i> Buscar usuarios
+            </a>
+        </li>
+        <li>
+            <a data-toggle="collapse" href="#admin" role="button" aria-controls="collapseAdmin">
+                    <i class="fa fa-cogs" aria-hidden="true"></i> Administrador <i class="float-right fa fa-chevron-down" aria-hidden="true"></i>
+            </a>
+            <div class="collapse" id="admin">
+                <ul class="list-unstyled">
+                    <li class="list-item"><a href="{{url_for('trivias_admin')}}">Lista de trivias</a></li>
+                    <li class="list-item"><a href="{{url_for('modificarRegla')}}">Modificar Reglas</a></li>
+                </ul>
+            </div>
+        </li>
+    {% else %}
+        <li>
+            <a href="{{url_for('index')}}">
+                <i class="fa fa-gamepad" aria-hidden="true"></i> Jugar
+            </a>
+        </li>
+        <li>
+            <a href="{{url_for('history')}}">
+                <i class="fa fa-trophy" aria-hidden="true"></i> Ranking
+            </a>
+        </li>
+        <li>
+            <a href="{{url_for('search_user')}}">
+                <i class="fa fa-users" aria-hidden="true"></i> Buscar usuarios
+            </a>
+        </li>
+        <li>
+            <a href="{{url_for('reglas')}}">
+                <i class="fa fa-question" aria-hidden="true"></i> Ayuda
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <i class="fa fa-cog" aria-hidden="true"></i> Idioma
+            </a>
+        </li>
+    {% endif %}
+{% endblock %}

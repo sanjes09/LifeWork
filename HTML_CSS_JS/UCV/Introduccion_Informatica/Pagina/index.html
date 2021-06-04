@@ -1,0 +1,145 @@
+﻿<!doctype html>
+<html>
+<head>
+<link rel="icon" type="image/png" href="pictures/favicon.png">
+<link rel="stylesheet" href="css/pagina.css" />
+<script src="js/jQuery.js"></script>
+<script src="js/adsRotator.js"></script>
+<script src="js/carrito.js"></script>
+<meta charset="utf-8">
+<title>La Bahía del Libro</title>
+</head>
+<body>
+<div id="header"><img src="pictures/bookbaybanner.png" alt="bookbay" style="width:100%;height:220px;"></div>
+<ul class="menu">
+  <li><a href="index.html"><img src="pictures/home.png" alt=home style="width: 24px; height: 24px;"/> Home</a></li>
+  <li class="desplegar">
+    <a href="#" class="botondes"><img src="pictures/avatar.png" alt=contact us style="width: 24px; height: 24px;"/> Contáctanos</a>
+    <div class="desp-content">
+        <a href="#">Antonella Requena Tlf:+584242354646</a>
+        <a href="#">Jesús Martínez Tlf:+584145689657</a>
+        <a href="#">Twitter: @BahiaDelLibro</a>
+        <a href="#">Facebook: La Bahia del Libro</a>
+    </div>
+  </li>
+  <li class="desplegar">
+    <a href="#" class="botondes"><img src="pictures/shapes.png" alt=generos style="width: 24px; height: 24px;"/> Géneros</a>
+    <div class="desp-content">
+      <a href="#biografico">Biográfico</a>
+      <a href="#ficcion">Ficción</a>
+      <a href="#horror">Horror</a>
+      <a href="#infantil">Infantil</a>
+      <a href="#suspenso">Suspenso</a>
+    </div>
+  </li>
+  <li class="comprar" id="redirect">
+  <a href="#" class="botondes" onclick="validar()"><img src="pictures/commerce.png" alt=home style="width: 24px; height: 24px;"/> Comprar</a></li>
+</ul>
+
+
+<img src="pictures/oferta.png" alt=flyer style="width:280px; height:280px; display: scroll; position: fixed; left:10px; top:320px;">
+
+
+<div id="sesion">
+    <h3 style="text-align: center;">Accede a tu cuenta</h3>
+    <form name="formulario">
+        <h4>Usuario:</h4>
+        <input type="text"/>
+        <br>
+        <h4>Contraseña:</h4>
+        <input type="text" onfocus="cambiaApass(this)"/>
+        <br><br>
+        <button type="button" onClick="divLogin()"><label>Iniciar Sesión</label></button>
+        <br><br>
+        <a href="#">¿No tienes cuenta? ¡Regístrate!</a>
+    </form> 
+</div>
+
+ <div class="container">
+            <h2>Ofertas del Mes</h2>
+            <div class="carrousel" data-pos="0">
+                <a href="#" class="carrousel_left left_inactive"></a>
+                <div id="adsCarrusel" class="carrousel_inner">
+                    <ul>
+                        <li>
+                            <a href="horror/thestrain.html"><img src="pictures/thestrain.jpg" style="width:70%; height:50%;"/></a>
+                        </li>
+                        <li>
+                            <a href="ficcion/hunger.html"><img src="pictures/hunger.jpg" style="width:70%; height:100%;"/></a>
+                        </li>
+                        <li>
+                            <a href="horror/thestrain.html"><img src="pictures/thefall.jpg" style="width:70%; height:100%;"/></a>
+                        </li>
+                        <li>
+                            <a href="ficcion/hunger.html"><img src="pictures/sinsajo.jpg" style="width:70%; height:100%;"/></a>
+                        </li>
+                        <li>
+                            <a href="horror/thestrain.html"><img src="pictures/eternal.jpg" style="width:70%; height:100%;"/></a>
+                        </li>
+                        <li>
+                           <a href="ficcion/hunger.html"><img src="pictures/enllamas.jpg" style="width:70%; height:100%;"/></a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#" class="carrousel_right"></a>
+                </div>
+ </div>
+ <div id="mainwrapper">
+ <h2 class="stroke">Catálogos</h2>
+ <hr>
+    <h3><a name=biografico>Biográfico</a></h3>
+    <ul style="list-style-type: none;  display: inline-block;">
+     	<li id="imagen"><a href="biografico/chiabe.html"><img src="pictures/chiabe.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="biografico/frida.html"><img src="pictures/frida.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="biografico/jobs.html"><img src="pictures/jobs.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="biografico/milucha.html"><img src="pictures/milucha.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="biografico/eat.html"><img src="pictures/eatpraylove.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="biografico/kurtcobain.html"><img src="pictures/kurt.jpg" style="width:100%; height:100%;"></a></li>
+    </ul>
+    <hr>
+    <h3><a name=ficcion>Ficción</a></h3>
+    <ul style="list-style-type: none;  display: inline-block;">
+     	<li id="imagen"><a href="ficcion/davinci.html"><img src="pictures/davinci.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="ficcion/goodliar.html"><img src="pictures/goodliar.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="ficcion/gosetaw.html"><img src="pictures/gosetaw.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="ficcion/hunger.html"><img src="pictures/hunger.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="ficcion/jumper.html"><img src="pictures/jumper.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="ficcion/tokilla.html"><img src="pictures/tokilla.jpg" style="width:100%; height:100%;"></a></li>
+    </ul>
+    <hr>
+    <h3><a name=horror>Horror</a></h3>
+    <ul style="list-style-type: none;  display: inline-block;">
+     	<li id="imagen"><a href="horror/carrie.html"><img src="pictures/carrie.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="horror/cthulhu.html"><img src="pictures/cthulhu.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="horror/dracula.html"><img src="pictures/dracula.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="horror/eso.html"><img src="pictures/eso.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="horror/thestrain.html"><img src="pictures/thestrain.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="horror/wwz.html"><img src="pictures/wwz.jpg" style="width:100%; height:100%;"></a></li>
+    </ul>
+    <hr>
+    <h3><a name=infantil>Infantil</a></h3>
+    <ul style="list-style-type: none;  display: inline-block;">
+     	<li id="imagen"><a href="infantil/elgato.html"><img src="pictures/elgatodelsombrero.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="infantil/elqueso.html"><img src="pictures/elqueso.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="infantil/migueluna.html"><img src="pictures/portada-miguel-luna-contra-bestia-bosque.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="infantil/pie.html"><img src="pictures/mecomiunpie.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="infantil/principito.html"><img src="pictures/principito.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="infantil/reymocho.html"><img src="pictures/reymocho.jpg" style="width:100%; height:100%;"></a></li>
+    </ul>
+    <hr>
+    <h3><a name=suspenso>Suspenso</a></h3>
+    <ul style="list-style-type: none;  display: inline-block;">
+     	<li id="imagen"><a href="suspenso/chicadeltren.html"><img src="pictures/lachicadeltren.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="suspenso/esfera.html"><img src="pictures/esfera.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="suspenso/fortaleza.html"><img src="pictures/fortalezadigital.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="suspenso/resplandor.html"><img src="pictures/shining.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="suspenso/sandstorm.html"><img src="pictures/tormentadearena.jpg" style="width:100%; height:100%;"></a></li>
+     	<li id="imagen"><a href="suspenso/zombi.html"><img src="pictures/zombieroom.jpg" style="width:100%; height:100%;"></a></li>
+    </ul>
+  </div>
+ 
+<footer>
+	Copyright © 2016, La Bahía del Libro - Desarrollado por Antonella Requena y Jesús Martínez
+</footer>
+</body>
+</html>

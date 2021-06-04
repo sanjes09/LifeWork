@@ -1,0 +1,33 @@
+li { 
+   display:inline; 
+   float:left; 
+   width:150px; 
+   height:150px;
+   background-color:#f5f7f9; 
+   padding:20px; 
+   margin:10px; 
+   text-align: center; 
+   border-right: #a5a7aa solid 1px; 
+   border-bottom: #a5a7aa solid 1px; 
+}
+
+li img {
+	width:140px; 
+    height:140px;	
+	object-fit: contain;
+}
+		
+li a {
+	font-family:arial;
+	font-size:10pt;
+	color: #86b1ef;
+ 	text-decoration:none;
+}
+
+li a:link, li a:visited {
+	 color: #68a0d9;
+}
+
+li a:hover { 
+	color: #68a0d8;
+}

@@ -1,0 +1,6 @@
+1##S ##A-A-5, OA-MUR-22##Facultad de Odontología
+3##S ##A-A-4, OA-MUR-30##Facultad de Farmacia
+5##S ##A-A-3, OA-MUR-25##Facultad de Ciencias
+7##E ##A-A-6, OA-ESC-19##Plaza del Rectorado 
+29##S ##A-A-1, OA-MUD-32, OA-ELP-11##Aula Magna 
+15##N ##OA-MUR-23##Rectorado

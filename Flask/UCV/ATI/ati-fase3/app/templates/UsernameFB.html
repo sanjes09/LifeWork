@@ -1,0 +1,63 @@
+{% extends "layout-login.html" %}
+
+{% block titlefav %}
+    Ingresar
+{% endblock %}
+
+{% block title %}
+    Iniciar Sesión
+{% endblock %}
+
+
+{% block content %}
+<div class="row p-4">
+    <div class="col-md-4">
+        <h5 class="float-right">Ingresar con:</h5>
+    </div>
+    <div class="col-md-4 text-center">
+        <a class="text-dark" href="#">
+            <h5><i class="fa fa-facebook-official" aria-hidden="true"></i> Facebook</h5>
+        </a>
+    </div>
+    <div class="col-md-4">
+        <a class="text-dark" href="#">
+            <h5 class="float-left"><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</h5>
+        </a>
+    </div>
+</div>
+    {% block error %}
+        {% if alert %}
+        <div class="col-md-6 mx-auto alert {{stl}} alert-dismissible fade show" role="alert">
+            {{alert}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        {% endif %}
+    {% endblock %}
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <form id="login" method="POST" action="/usernameFacebook">
+                <div class="form-group">
+                    <label for="user"><i class="fa fa-user" aria-hidden="true"></i> Username</label>
+                    <input type="text" class="form-control" id="user" name="username" aria-describedby="emailHelp" placeholder="Username" required>
+                    <small id="user" class="form-text text-muted">Ingrese su username.</small>
+                </div>
+                <button type="submit" class="btn btn-primary btn-lg btn-block">
+                    <i class="fa fa-sign-in" aria-hidden="true"></i> Ingresar
+                </button>
+            </form>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <br>
+    <br>
+    <div class="row">
+        <span class="col-md-3"></span>
+        <a class="col-md-6" href="{{ url_for('register') }}">
+            <i class="fa fa-user-plus" aria-hidden="true"></i> Registrarse
+        </a>
+        <span class="col-md-3"></span>
+    </div>
+{% endblock %}

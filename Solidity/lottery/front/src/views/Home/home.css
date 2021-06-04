@@ -1,0 +1,7 @@
+.home-main{
+  min-height: 100vh;
+  background-image: url('https://picsum.photos/1080/1920');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

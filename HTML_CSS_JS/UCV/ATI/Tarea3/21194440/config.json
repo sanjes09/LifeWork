@@ -1,0 +1,11 @@
+config = {	
+	"ci":"Cedula:",
+	"genero":"Genero:",
+	"fecha_nacimiento":"Fecha de nacimiento:",
+	"color":"Mi color favorito es:",
+	"libro":"Mi libro favorito es:",
+	"musica":"Mi estilo de música preferida:",
+	"video_juego":"Video juegos favoritos:",
+	"lenguajes":"Lenguajes aprendidos:",
+	"como_comunicarse":"Si necesitan comunicarse conmigo me pueden escribir a:",
+}

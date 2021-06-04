@@ -1,0 +1,7 @@
+[package]
+name = "lists"
+version = "0.1.0"
+authors = ["santiago"]
+edition = "2018"
+
+[dependencies]

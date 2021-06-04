@@ -1,0 +1,45 @@
+{% extends "layout-menu.html" %}
+
+{% block title %}
+    Perfil
+{% endblock %}
+
+{% block user %}
+    Usuario
+{% endblock %}
+
+{% block main %}
+    <div class="row m-3">
+        <div class="col-md-3">
+            {% block image_user %}{% endblock %}
+        </div>
+        <div class="col-md-6">
+            <span class="lead">Nombre: </span><span class="lead">{{user.name}}</span>
+            <br>
+            <br>
+            <span class="lead">Usuario: </span><span class="lead">{{user.username}}</span>
+            <br>
+            <br>
+            {% if myprofile == True %}
+                <span class="lead">Correo: </span><span class="lead">{{user.email}}</span>
+                <br>
+            {% endif %}
+        </div>
+        <div class="col-md-3">
+            {% block button_edit %}{% endblock %}
+        </div>
+    </div>
+    <br>
+    <hr>
+    <br>
+    {% if user.type == "user" %}
+        <div class="row m-2">
+            <div class="col-md-12">
+                <span class="lead">Puntuación: </span><span class="lead">{{user.points}} puntos</span>
+                <br>
+                <span class="lead">Posición en el Ranking: </span><span class="lead">{{user.ranking}} lugar</span>
+                <br>
+            </div>
+        </div>
+    {% endif %}
+{% endblock %}

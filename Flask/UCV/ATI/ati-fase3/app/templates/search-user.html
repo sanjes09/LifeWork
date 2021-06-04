@@ -1,0 +1,72 @@
+{% extends "layout-menu.html" %}
+
+{% block title %}
+    Buscar Usuario
+{% endblock %}
+
+{% block main %}
+    <div class="row my-3">
+        <nav class="navbar navbar-light bg-light mx-auto">
+            <form class="form-inline my-2 my-lg-0" action="/search-user" method="POST">
+                <input class="form-control mr-sm-2" type="search" name="user" id="user" placeholder="Buscar..." aria-label="Search">
+                <button style="background-color: #7F7FD5" class="btn btn-outline-light my-2 my-sm-0" type="submit">
+                    <i class="fa fa-search" aria-hidden="true"></i> Buscar
+                </button>
+            </form>
+        </nav>
+    </div>
+    <br>
+    {% if allUsers %}
+        {% for each in allUsers %}
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 shadow-lg p-3 mb-5 bg-white rounded">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img  src="{{each.img}}" width="150" height="150" alt="Usuario">
+                        </div>
+                        <div class="col-md-6">
+                            <p class="text-dark"><b>User:</b> {{each.username}}</p>
+                            <p class="text-dark"><b>Nombre:</b> {{each.name}}</p>
+                            <p class="text-dark"><b>Posición:</b> {{each.ranking}} lugar</p>
+                        </div>
+                        <div class="col-md-3 align-self-center">
+                            <a class="btn btn-outline-light" style="background-color: #7F7FD5" href="/profile/{{each._id}}">
+                                    <i class="fa fa-eye" aria-hidden="true"></i> Ver perfil
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-md-3"></div>
+            </div>
+        {% endfor %}
+    {% else %}
+        {% if oneUser %}
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-10 shadow-lg p-3 mb-5 bg-white rounded">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img  src="https://picsum.photos/id/237/150/150" alt="Usuario">
+                        </div>
+                        <div class="col-md-6">
+                            <p class="text-dark"><b>User:</b> {{oneUser.username}}</p>
+                            <p class="text-dark"><b>Nombre:</b> {{oneUser.name}}</p>
+                            <p class="text-dark"><b>Posición:</b> {{oneUser.ranking}} lugar</p>
+                        </div>
+                        <div class="col-md-3 align-self-center">
+                            <a class="btn btn-outline-light" style="background-color: #7F7FD5" href="/profile/{{oneUser._id}}">
+                                    <i class="fa fa-eye" aria-hidden="true"></i> Ver perfil
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                <div class="col-md-3"></div>
+            </div>
+        {% else %}
+            <p class="text-dark"><b>no users found!</b></p>
+        {% endif %}
+    {% endif %}
+
+
+{% endblock %}

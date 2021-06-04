@@ -1,0 +1,166 @@
+@import url(https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:200,300,400);
+
+.timer-group {
+  height: 300px;
+  margin: 0 auto;
+  position: relative;
+  width: 300px;
+}
+
+.timer {
+  border-radius: 50%;
+  height: 50px;
+  overflow: hidden;
+  position: absolute;
+  width: 50px;
+}
+
+.timer:after {
+  /* background: #111 url(https://codepen.io/images/classy_fabric.png); */
+  border-radius: 50%;
+  content: "";
+  display: block;
+  height: 220px !important;
+  left: 15px !important;
+  position: absolute;
+  width: 220px !important;
+  top: 15px !important;
+}
+
+.timer .hand {
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  width: 50%;
+}
+
+.timer .hand span {
+  border: 50px solid rgba(0, 255, 255, .4);
+  border-bottom-color: transparent;
+  border-left-color: transparent;
+  border-radius: 50%;
+  display: block;
+  height: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform: rotate(225deg);
+  width: 0;
+}
+
+.timer .hand:first-child {
+  transform: rotate(180deg);
+}
+
+.timer .hand span {
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.timer .hand:first-child span {
+  animation-name: spin1;
+}
+
+.timer .hand:last-child span {
+  animation-name: spin2; 
+}
+
+
+.timer.minute {
+  background: rgba(0, 0, 0, .2);
+  height: 250px;
+  left: 25px;
+  width: 250px;
+  top: 25px;
+}
+
+.timer.minute .hand span {
+  animation-duration: 30s;
+  border-top-color: #ffbd59;
+  border-right-color: #ffbd59;
+  border-width: 125px;
+}
+
+.timer.minute:after {
+  height: 310px;
+  left: 20px;
+  width: 310px;
+  top: 20px;
+}
+
+.timer.second {
+  background: rgba(0, 0, 0, .2);
+  height: 200px;
+  left: 50px;
+  width: 200px;
+  top: 50px;
+}
+
+.timer.second .hand span {
+  animation-duration: 1s;
+  border-top-color: #ffbd59;
+  border-right-color: #ffbd59;
+  border-width: 102px;
+}
+
+.timer.second:after {
+  height: 196px;
+  left: 2px;
+  width: 196px;
+  top: 2px;
+}
+
+.face {
+    background: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  border-radius: 50%;
+  height: 196px;
+  left: 52px;
+  padding: 165px 40px 0;
+  position: absolute;
+  width: 196px;
+  text-align: center;
+  top: 52px;
+}
+
+.face h2 {
+  font-weight: 200; 
+}
+
+.face p {
+  border-radius: 20px;
+  font-size: 76px;
+  font-weight: 400;
+  position: absolute;
+  top: 17px;
+  width: 160px;
+  left: 20px;
+}
+
+@keyframes spin1 {
+  0% {
+    transform: rotate(225deg);
+  }
+  50% {
+    transform: rotate(225deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}
+
+@keyframes spin2 {
+  0% {
+    transform: rotate(225deg);
+  }
+  50% {
+    transform: rotate(405deg);
+  }
+  100% {
+    transform: rotate(405deg);
+  }
+}

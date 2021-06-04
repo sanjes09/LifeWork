@@ -1,0 +1,38 @@
+{% extends "layout-menu.html" %}
+
+{% block title %}
+    INICIO
+{% endblock %}
+
+{% block main %}
+    <div class="row text-center mt-5 mb-5">
+        <div class="col-2"></div>
+        <a href="{{url_for('trivias')}}" class="btn home col-3 text-light" style="background-color: #7F7FD5;">
+            <i class="fa fa-gamepad" aria-hidden="true"></i> 
+            <br>
+            Jugar
+        </a>
+        <div class="col-2"></div>
+        <a href="{{url_for('history')}}" class="btn home col-3 text-light" style="background-color: #7F7FD5">
+            <i class="fa fa-trophy" aria-hidden="true"></i>
+            <br>
+            Ranking
+        </a>
+        <div class="col-2"></div>
+    </div>
+    <div class="row text-center">
+        <div class="col-2"></div>
+        <a href="#" class="btn home col-3 text-light" style="background-color: #7F7FD5;">
+            <i class="fa fa-cog" aria-hidden="true"></i>
+            <br>
+            Configuración
+        </a>
+        <div class="col-2"></div>
+        <a href="{{url_for('reglas')}}" class="btn home col-3 text-light" style="background-color: #7F7FD5">
+            <i class="fa fa-question" aria-hidden="true"></i>
+            <br>
+            Ayuda
+        </a>
+        <div class="col-2"></div>
+    </div>
+{% endblock %}

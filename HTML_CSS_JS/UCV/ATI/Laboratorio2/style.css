@@ -1,0 +1,97 @@
+*{
+	margin: 0px;
+	padding: 0px;
+}
+
+body{
+	background-color: #002233;
+	text-align: center;
+}
+h1{
+	color: #AAA100;
+	font-size: 300%; 
+}
+table{
+	background-color: #336699;
+	margin-left: auto;
+	margin-right: auto;
+}
+footer{
+	color: #AAA100;
+}
+form table{
+	background-color: #336699;
+}
+.imgheader{
+	width: 500px;
+	height: 200px;
+}
+
+.menu{
+	position: fixed;
+	text-align: center;
+    list-style-type: none;
+    padding-left: 40%;
+    overflow: hidden;
+}
+
+li {
+    float:left;
+    background-image: radial-gradient(#062b3d, #031923, #010e14);
+}
+
+li a{
+    display: inline-block;
+    color: white;
+    padding: 6px 6px;
+    text-decoration: none;
+	font-family:Georgia;
+	font-size:22px;
+    -webkit-transition: background-color 0.5s, transform 1s;
+  	transition: background-color 0.5s, transform 1s;
+}
+
+li a:hover{
+    background-color: #0088cc;
+    transform: scale(1.1, 1.1);
+}
+
+#collage{
+	padding: 20px;
+	width: 70%;
+	height: 100%;
+	margin: auto;
+	background-color: black;
+}
+
+#img1{
+	width: 39%;
+	height: 30%;
+	display: inline-block;
+}
+#img2{
+	width: 59%;
+	height: 30%;
+	display: inline-block;
+}
+#img3{
+	width: 59%;
+	height: 30%;
+	display: inline-block;
+}
+#img4{
+	width: 39%;
+	height: 30%;
+	display: inline-block;
+}
+
+.imagen{
+	height: 100%;
+	width: 100%;
+	-webkit-transition: transform 1s;
+  	transition: transform 1s;
+}
+
+.imagen:hover{
+	transform: scale(1.1, 1.1);
+}

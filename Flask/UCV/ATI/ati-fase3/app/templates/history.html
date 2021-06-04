@@ -1,0 +1,49 @@
+{% extends "layout-menu.html" %}
+{% block title %}
+    Trivia
+{% endblock %}
+{% block main %}
+    {% if session["user"] == "admin" %}
+        {% set href_draws = url_for('sorteos_admin') %}
+        {% set href_snapshots = url_for('snapshots_admin') %}
+    {% else %}
+        {% set href_draws = url_for('sorteos') %}
+        {% set href_snapshots = url_for('snapshots') %}
+    {% endif %}
+    <div class="row text-center mt-5 mb-5">
+        <div class="col-6"></div>
+        <a class="btn btn-primary col-md-5 d-block text-light" href="{{href_draws}}" style="background-color: #7F7FD5; cursor: pointer;">
+            <i class="fa fa-list-ul" aria-hidden="true"></i> Lista de sorteos
+        </a>
+        <div class="col-1"></div>
+    </div>
+    <div class="row text-center" style="height:400px !important">
+        <div class="col-4 media justify-content-center">
+            <span class="align-self-top">
+                1°
+                <br/>
+                <img src="https://picsum.photos/id/1/200/200" alt="">
+                <br/>
+                Nombre
+            </span>
+        </div>
+        <div class="col-4 media justify-content-center">
+            <span class="align-self-center">
+                2°
+                <br/>
+                <img src="https://picsum.photos/id/2/200/200" alt="">
+                <br/>
+                Nombre
+            </span>
+        </div>
+        <div class="col-4 media justify-content-center">
+            <span class="align-self-end">
+                3°
+                <br/>
+                <img src="https://picsum.photos/id/3/200/200" alt="">
+                <br/>
+                Nombre
+            </span>
+        </div>
+    </div>
+{% endblock %}

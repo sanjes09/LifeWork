@@ -1,0 +1,33 @@
+.NavBar{
+    background-color: #ffffff99 !important;   
+    position: absolute; 
+    width: 100%;
+}
+
+.nav-item .nav-link{
+    color: #6a6a6a;
+    font-size: 0.8rem;
+    font-family: Lato-Regular;
+}
+
+.nav-item .active{
+    font-size: 0.8rem;
+    border-bottom: 5px solid #20C178;
+}
+
+.nav-button { 
+    border: 1px solid #20C178;
+    border-radius: 8px !important;
+    padding: 3px 10px !important; 
+    font-size: 0.9rem !important;
+    font-family: Lato-Light;
+}
+
+.nav-button:focus { 
+    outline: 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}
+
+.nav-link:hover{
+    color: #20C178 !important;
+}

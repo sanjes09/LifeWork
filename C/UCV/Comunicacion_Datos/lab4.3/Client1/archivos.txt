@@ -1,0 +1,4 @@
+foto.jpg
+archiv.txt
+documento.doc
+blabla.j

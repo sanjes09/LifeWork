@@ -1,0 +1,19 @@
+{% extends "layout-menu.html" %}
+
+{% block main %}
+    <div class="row my-3">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            {% block button_add %}{% endblock %}
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10 shadow-lg p-3 mb-5 bg-white rounded">
+            {% block body %}{% endblock %}
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+{% endblock %}

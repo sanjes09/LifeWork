@@ -1,0 +1,287 @@
+@font-face {
+  font-family: "residualni";
+  src: url("../fuentes/residualni/residual-25p.ttf");
+}
+
+@font-face{
+ 
+  font-family: "canela";
+  src: url("../fuentes/canela/CanelaBarkPersonal.ttf");
+}
+
+body{ margin: 0; }
+
+h2{
+	color:#86c4e5;
+	font-family:residualni;
+	font-size:50px;
+    -webkit-text-fill-color: #86c4e5;
+    -webkit-text-stroke: 1px black;
+	}
+
+h1,h3{
+	color:#020202;
+	font-family:residualni;
+	font-size:30px;
+	}
+
+table{ width:100%;
+
+}
+
+
+#header{
+  margin:0;
+}
+
+#content-carrito{
+	float:right;
+	border-color:black;
+	width:21%;
+	height:340px;
+	padding-left:0px;
+    background-color: #E3E3E3;
+    display: scroll; 
+    position: fixed;
+    overflow-y: scroll; 
+}
+#content-carrito2{
+    float:right;
+    border-color:black;
+    width:21%;
+    height:80px;
+    margin-left:70%;
+    background-color: #333;
+    display: scroll; 
+    margin-right: 1%;
+    position: fixed;
+     color: white;
+}
+
+#content-carrito3{
+    float:right;
+    width:21%;
+    height:80px;
+    padding-left:0px;
+    background-color: #333;
+    display: scroll;
+    margin-right: 1%;
+    position: fixed;
+    z-index: 1;
+    color: white;
+}
+
+#imglista{
+	margin-bottom:0px;
+	height:50px;
+	width:37px;
+	}
+	
+#listacomprar{
+	height: 5px;
+	width:3px;
+	}
+	
+label{
+	 font-family:Georgia;
+	 font-size:14px;
+	 margin-top:10px;
+	}
+
+#compra{
+    background-color: white;
+    font-size: 20px;
+    height:300px;
+	width: 23%;
+    float:right;
+    margin-right:5px;
+}
+
+#sesion{
+    border: 1px solid lightgrey;
+    height:350px;
+    width: 300px;
+    background-color: #E3E3E3;
+    float:right;
+    margin-right: 1%;
+    margin-top: 20%px;
+    padding-left: 20px;
+}
+
+#info{
+	border: 2px solid lightgrey;
+    line-height:20px;
+    font-size: 15px;
+    height:100%;
+    min-width:20%;
+	max-width:50%;
+    float:left;
+    padding:10px;
+}
+
+#photo{
+    border: 2px solid lightgrey;
+    height:100%;
+    min-width:10%;
+    max-width:23%;
+    float:left;
+    padding:10px; 
+}
+
+
+#mainwrapper {
+    min-width:50%;
+	max-width:80%;
+	min-height:70%;
+	max-height: 100%;
+	padding-left:310px;
+}
+
+footer {
+    background-color:#93c4e4;
+    color:black;
+    clear:both;
+	font-family:georgia;
+    text-align:center;
+    padding:5px; 
+	font-size:12px;
+}
+
+#imagen{
+	height:250px;
+	width:160px;
+}
+
+p{
+    text-align: justify;
+	font-family:Georgia;
+}
+
+.menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+     
+li {
+    float:left;
+    list-style-type: none;
+}
+
+li a, .botondes {
+    display: inline-block;
+    color: white;
+    text-align:center;
+    padding: 10px 12px;
+    text-decoration: none;
+	font-family:Georgia;
+	font-size:22px;
+}
+
+li a:hover, .desplegar:hover .botondes {
+    background-color: #93c4e4;
+}
+
+li.desplegar {
+    display: inline-block;
+}
+
+li.comprar{
+   display: inline-block;
+   float: right;
+}
+
+.desp-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    position: absolute;
+    z-index: 1;
+}
+
+.desp-content a {
+    color: black;
+    padding: 12px 16px;
+    font-family: georgia;
+    display: block;
+    text-align: left;
+}
+
+.desp-content a:hover {
+       background-color: #A7C1C9;
+}
+
+.desplegar:hover .desp-content {
+    display: block;
+}
+
+.carrousel_inner ul li{
+    float:left;
+    list-style: none;
+    margin: 0;
+    width:200px;
+    height:250px;
+}
+.carrousel_inner ul{
+    margin:0;
+    padding:0;
+    height:300px;
+    width: 10000px;
+    overflow:hidden;
+}
+.carrousel_inner{
+    float:left;
+    width:600px;
+    height:200px;
+    overflow: hidden;
+}
+.carrousel_left, .carrousel_right{
+    height: 300px;
+    width:30px;
+    float:left;
+}
+.carrousel_left{
+    background: url(../pictures/nav_left.gif) no-repeat  left top;
+}
+.carrousel_left:hover{
+    background:url("../pictures/nav_left.gif") no-repeat scroll -50px top transparent
+}
+.carrousel_right{
+    background: url(../pictures/nav_right.gif) no-repeat right top;
+}
+.carrousel_right:hover{
+    background: url(../pictures/nav_right.gif) no-repeat -70px top;
+}
+.left_inactive,.left_inactive:hover{
+    background: url(../pictures/nav_left.gif) no-repeat -100px top;
+}
+.right_inactive,.right_inactive:hover{
+    background: url(../pictures/nav_right.gif) no-repeat -20px top;
+}
+
+.carrousel{
+    height: 300px;
+    width: 660px;
+}
+
+.container{
+    width:50%;
+	height:50%;
+    margin:0 auto;
+}
+
+.link{
+     background-color: #4d1414;
+    border: 3px solid gray;
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 1px 1px 5px black;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 5px;
+    padding: 6px;
+    text-decoration: none;
+}

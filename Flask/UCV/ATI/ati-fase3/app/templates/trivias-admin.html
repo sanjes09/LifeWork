@@ -1,0 +1,155 @@
+{% extends "layout-menu.html" %}
+
+{% block title %}
+Trivias
+{% endblock %}
+
+{% block main %}
+    <div class="row my-3">
+        <div class="col-md-9"></div>
+        <div class="col-md-3">
+            <a type="button" class="btn btn-primary mx-auto" href="{{url_for('crearTrivia')}}">
+                <i class="fa fa-plus" aria-hidden="true"></i> Crear nueva
+            </a>
+        </div>
+    </div>
+    {% if trivias %}
+        {% for trivia in trivias %}
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8 shadow-lg p-3 mb-5 bg-white rounded">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <img  src="{{trivia.img}}" height="150" width="150" alt="Categoria">
+                        </div>
+                        <div class="col-md-5">
+                            <p class="text-dark">Categoría: {{trivia.name}}</p>
+                            <p class="text-dark">Puntos: {{trivia.points}}</p>
+                        </div>
+                        <div class="col-md-4 align-self-center">
+                            <a class="btn btn-secondary d-block" href="#" data-toggle="modal" onclick="modal_update('{{trivia.name}}','{{trivia._id}}');" data-target="#updateTrivia">
+                                <i class="fa fa-cog" aria-hidden="true"></i> Modificar
+                            </a>
+                            <br>
+                            <a class="btn btn-success d-block text-light" href="#" data-toggle="modal" onclick="modal_add('{{trivia.name}}');" data-target="#addModal">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i> Agregar Pregunta
+                            </a>
+                            <br>
+                            <a class="btn btn-danger d-block text-light" href="#" data-toggle="modal" onclick="modal_delete('{{trivia.name}}','{{trivia._id}}');" data-target="#deleteModal">
+                                <i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p class="text-dark">No trivias available</p>
+    {% endif %}
+{% endblock %}
+
+{% block modal %}
+<!-- Modal Update -->
+<div class="modal fade" id="updateTrivia" tabindex="-1" role="dialog" aria-labelledby="updateTriviaLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="updateTriviaLabel">Modificar trivia</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body mx-auto">
+                <form id="edit" method="POST" action="/modificarTrivia" enctype="multipart/form-data">
+                    <div class="row pt-3 pl-3 pr-3">
+                        <div class="form-group" id="nombremodif">
+                            <label for="name">Nombre de categoría</label>
+                            <input type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="Deportes"
+                                value="" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="file-trivia">Cambiar imágen</label>
+                            <input type="file" class="form-control-file" name="file" id="file">
+                        </div>
+                    </div>
+                    <input type="hidden" name="id" id="id-modif">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                <button type="submit" form="edit" class="btn btn-primary">Actualizar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- add Modal -->
+<div class="modal fade" id="addModal" tabindex="-1" role="dialog" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form id="edit" method="POST" action="/addPregunta">
+                <div class="form-group">
+                    <label for="file-question">Cambiar imágen/audio</label>
+                    <input type="file" class="form-control-file" name="file" id="file-question" required>
+                </div>
+                <div class="form-group col-12">
+                    <label for="name">Pregunta</label>
+                    <input type="text" class="form-control" id="question" name="question" aria-describedby="question" placeholder="¿Pregunta?" value="" required>
+                </div>
+                <br>
+                <div class="form-group col-12">
+                    <label for="name">Respuesta correcta</label>
+                    <input type="text" class="form-control" id="ans0" name="ans0" aria-describedby="cor" placeholder="Respuesta" value="" required>
+                </div>
+                <div class="form-group col-12">
+                    <label for="name">Respuestas Incorrectas</label>
+                    <input type="text" class="form-control" id="ans1" name="ans1" aria-describedby="inco" placeholder="Respuesta" value="" required>
+                    <br>
+                    <input type="text" class="form-control" id="ans2" name="ans2" aria-describedby="inco" placeholder="Respuesta" value="" required>
+                    <br>
+                    <input type="text" class="form-control" id="ans3" name="ans3" aria-describedby="inco" placeholder="Respuesta" value="" required>
+                </div>
+                <input type="hidden" name="catName" id="catName">
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form id="edit" method="POST" action="/eliminarTrivia">
+                <div class="modal-body mx-auto">
+                    <h5 class="text-center">¿Está seguro de eliminar esta trivia?</h5>
+                    <p id="id-elim-cont">Nombre: </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary float-left" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger float-right">Eliminar</button>
+                </div>
+                <input type="hidden" name="id" id="id-elim">
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+    <script>
+        function modal_update(name, id){
+            $("#nombremodif #name").val(name);
+            $("#id-modif").val(id);
+        }
+
+        function modal_add(name){
+            $("#catName").val(name);
+        }
+
+        function modal_delete(name, id){
+            $("#id-elim-cont").append(name);
+            $("#id-elim").val(id);
+        }
+    </script>
+{% endblock %}

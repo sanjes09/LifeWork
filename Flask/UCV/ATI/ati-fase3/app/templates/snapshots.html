@@ -1,0 +1,156 @@
+{% extends "layout-premios.html" %}
+
+{% block title %}
+    Premios Instantáneos
+{% endblock %}
+
+{% block button_add %}
+    {% if user == "admin" %}
+        <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#snapshotsModal">
+            <i class="fa fa-plus" aria-hidden="true"></i> Agregar Premio
+        </button>
+    {% else %}
+        <span></span>
+    {% endif %}
+    
+{% endblock %}
+
+{% block body %}
+    <div class="row">
+        <div class="col-md-3">
+            <img  src="https://picsum.photos/150/150" alt="Premios">
+        </div>
+        <div class="col-md-3">
+            <p class="text-dark"><b>Premio:</b> {{points_snapshots}} puntos</p>
+            <p class="text-dark"><b>Frecuencia:</b> {{frecuencia}}</p>
+        </div>
+        <div class="col-md-3">
+            <p class="text-dark"><b>Fecha:</b> {{date_snapshots}}</p>
+            <p class="text-dark"><b>Cantidad:</b> {{cantidad}}</p>
+        </div>
+
+        {% if user == "admin" %}
+            <div class="col-md-3 align-self-center">
+                <button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#snapshotsModalEdit">
+                    <i class="fa fa-cog" aria-hidden="true"></i> Modificar
+                </button>
+                <br>
+                <br>
+                <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#snapshotsModalDelete">
+                    <i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar
+                </button>
+            </div>
+        {% else %}
+            <span></span>
+        {% endif %}
+        
+    </div>
+{% endblock %}
+
+{% block modal %}
+    {% if user == "admin" %}
+        <!-- Nuevo Instantaneo Modal-->
+        <div class="modal fade" id="snapshotsModal" tabindex="-1" role="dialog" aria-labelledby="snapshotsModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="snapshotsModalLabel">Crear premio instantáneo</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form id="snapshotsNew" method="POST" action="">
+                            <div class="form-group">
+                                <label for="image-snapshots">Imagen</label>
+                                <input type="file" class="form-control-file" id="image-sorteo" name="image-snapshots">
+                            </div>
+                            <div class="form-group">
+                                <label for="date">Fecha tope</label>
+                                <input type="date" class="form-control" id="date" aria-describedby="date" placeholder="dd/mm/aa" required>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-12" for="points">Puntuación</label>
+                                <input type="number" class="form-control col-4 mx-3" id="points" placeholder="100" required>
+                                <span class="col-7">puntos</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="cant">Cantidad</label>
+                                <input type="number" class="form-control" id="cant" placeholder="1er" required>
+                            </div>
+                            <div class="form-group row">
+                                <label class="col-12" for="cant">Frecuencia</label>
+                                <input type="number" class="form-control col-4 mx-3" id="cant" placeholder="Número de trivias" required>
+                                <span class="col-7">trivias</span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" form="snapshotsNew" class="btn btn-success">Crear premio</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modificar Instantaneo Modal-->
+        <div class="modal fade" id="snapshotsModalEdit" tabindex="-1" role="dialog" aria-labelledby="snapshotsModalEditLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="snapshotsModalLabel">Modificar premio</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="snapshotsEdit" method="POST" action="">
+                                <div class="form-group">
+                                    <label for="image-snapshots">Imagen</label>
+                                    <input type="file" class="form-control-file" id="image-snapshots" name="image-snapshots">
+                                </div>
+                                <div class="form-group">
+                                    <label for="date">Fecha tope</label>
+                                    <input type="date" class="form-control" id="date" aria-describedby="date" placeholder="dd/mm/aa" value="2019-09-23" required>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-12" for="points">Premio</label>
+                                    <input type="number" class="form-control col-4 mx-3" id="points" aria-describedby="description" placeholder="100" value="{{points_snapshots}}" required>
+                                    <span class="col-7">puntos</span>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cant">Cantidad</label>
+                                    <input type="number" class="form-control" id="cant" placeholder="1" value="{{cantidad}}" required>
+                                </div>
+                                <div class="form-group row">
+                                    <label class="col-12" for="cant">Frecuencia</label>
+                                    <input type="number" class="form-control col-4 mx-3" id="cant" placeholder="Número de trivias" value="{{frecuencia}}" required>
+                                    <span class="col-7">trivias</span>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+                            <button type="submit" form="snapshotsEdit" class="btn btn-success">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Delete Modal -->
+            <div class="modal fade" id="snapshotsModalDelete" tabindex="-1" role="dialog" aria-labelledby="snapshotsModalDeleteLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body mx-auto">
+                            <h5 class="text-center">¿Está seguro de eliminar este premio?</h5>
+                            <p><b>Premio:</b> {{description_snapshots}}</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary float-left" data-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-danger float-right">Elminar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    {% endif %}
+{% endblock %}

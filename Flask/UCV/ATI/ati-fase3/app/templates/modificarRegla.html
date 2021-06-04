@@ -1,0 +1,119 @@
+{% extends "layout-menu.html" %}
+ 
+{% block title %}
+    Modificar Reglas
+{% endblock %}
+
+{% block main %}
+    <div class="box_shadow">
+        <div class="row mt-4">
+            <ul class="mt-3 ml-3" style="width: 100%;">
+                {% for rule in rules %}
+                    <li style="color: #7F7FD5; font-size: 1.5rem">{{rule.title}}
+                        <p class="mr-5 text-justify" style="font-size: 1rem">{{rule.description}}</p>
+                        <div class="row" style="width: 100%;">
+                            <div class="col-8"></div>
+                            <div class="col-2 float-right">
+                                <button type="button" class="btn btn-secondary" data-toggle="modal" onclick="modal_update('{{rule.title}}','{{rule.description}}','{{rule._id}}');" data-target="#updateModal">
+                                    <i class="fa fa-cog" aria-hidden="true"></i> Modificar
+                                </button>
+                            </div>
+                            <div class="col-2 float-right">
+                                <button type="button" class="btn btn-danger text-light" onclick="modal_delete('{{rule._id}}','{{rule.title}}');" data-toggle="modal" data-target="#deleteModal">
+                                    <i class="fa fa-trash-o" aria-hidden="true"></i> Eliminar
+                                </button>
+                            </div>
+                        </div>
+                    </li>
+                    <hr>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    <br>
+    <div class="box_shadow mt-5 p-4">
+        <form id="crear" method="POST" action="/crearRegla">
+            <div class="form-group">
+                <label for="title">Título</label>
+                <input type="text" class="form-control" id="title" name="title" aria-describedby="name" placeholder="Regla 1"
+                    value="" required>
+            </div>
+            <div class="form-group">
+                <label for="content-rule">Contenido</label>
+                <textarea class="form-control" id="content-rule" name="content-rule" rows="3" placeholder="Introduzca una regla nueva..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary d-block">Añadir nueva</button>
+        </form>
+    </div>
+    <br>
+{% endblock %}
+
+{% block modal %}
+<!-- Update Modal -->
+<div class="modal fade" id="updateModal" tabindex="-1" role="dialog" aria-labelledby="updateModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="updateModalLabel">Editar regla</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="edit" method="POST" action="/modificarRegla">
+                    <div class="form-group" id="titleform">
+                        <label for="title">Título</label>
+                        <input type="text" class="form-control" id="title" name="title" aria-describedby="name" placeholder="Regla 1"
+                            value="" required>
+                    </div>
+                    <div class="form-group" id="descriptionform">
+                        <label for="content-rule">Contenido</label>
+                        <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                    </div>
+                    <input type="hidden" name="id" id="id-rule">
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                <button type="submit" form="edit" class="btn btn-primary">Guardar Cambios</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Delete Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <form id="edit" method="POST" action="/eliminarRegla">
+                <div class="modal-body mx-auto">
+                    <h5 class="text-center">¿Está seguro de eliminar esta Regla?</h5>
+                    <p id="id-rule-cont"> </p>
+                </div>
+                <input type="hidden" name="id" id="id-rule-delete">
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary float-left" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" class="btn btn-danger float-right">Eliminar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+{% block javascript %}
+    <script>
+        function modal_update(title, content, id){
+            $("#titleform #title").val(title);
+            $("#descriptionform #description").text(content);
+            $("#id-rule").val(id);
+        }
+
+        function modal_delete(id,title){
+            $("#id-rule-cont").text(title);
+            $("#id-rule-delete").val(id);
+        }
+    </script>
+{% endblock %}

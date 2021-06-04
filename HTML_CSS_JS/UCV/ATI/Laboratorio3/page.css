@@ -1,0 +1,51 @@
+body{
+	text-align: center;
+	background-image: linear-gradient(to right, #244987, #19325b, #010e14);
+}
+
+h1{
+	color: #876c00;
+}
+
+p{
+	color:white;
+}
+
+.data_title{
+	font-weight: bold;
+	-webkit-transition: transform 1s;
+  	transition: transform 1s;
+}
+
+.data_title:hover{
+	transform: scale(1.1, 1.1);
+}
+
+.data_description{
+	-webkit-transition: transform 1s;
+  	transition: transform 1s;
+}
+
+.data_description:hover{
+	transform: scale(1.1, 1.1);
+}
+
+.img{
+	width: 50%;
+	height: 50%;
+    -webkit-transition: transform 1s;
+  	transition: transform 1s;
+}
+
+.img:hover{
+    transform: scale(1.1, 1.1);
+}
+
+#content{
+	margin-left: 20%;
+	margin-right: 20%;
+	border-style: white;
+	background-image: radial-gradient( #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #000000, #423a00);
+	border-radius: 25px;
+ 
+}

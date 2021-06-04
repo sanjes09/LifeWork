@@ -1,0 +1,2 @@
+Este sera el contenido del nuevo archivo. 
+Esto se copiara en la otra linea. 

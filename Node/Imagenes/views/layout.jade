@@ -1,0 +1,22 @@
+doctype html
+html(lang="es")
+    head
+        meta(charset="UTF-8")
+        link(href="/public/app.css" rel="stylesheet")
+        link(href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
+        script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous")
+        title NodeJs
+    body
+        nav(class="p-2 text-white bg-dark text-right")
+            ul
+                li 
+                    a(href="/app") Inicio
+                li
+                    a(href="/app/imagenes") Imagenes
+                li
+                    a(href="/app/imagenes/new") Subir imagen
+                li
+                    a(href="/app/logout") Cerrar sesion
+        div(class="container-fluid")
+            div(class="col-10 m-auto")
+                block contenido

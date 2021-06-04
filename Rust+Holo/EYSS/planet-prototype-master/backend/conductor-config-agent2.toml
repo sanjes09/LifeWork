@@ -1,0 +1,68 @@
+# -----------  Agents  -----------
+
+[[agents]]
+id = "test_agent2"
+name = "Agent 2"
+public_address = "HcSCixr7k5ckx79ajvCAb6GfjN3H7fyfz3f3zfoKM4TX9i38TavHvW9aPv49nua"
+keystore_file = "./agent2.keystore"
+
+# -----------  DNA  -----------
+
+
+[[dnas]]
+id = "chat_dna"
+file = "./dist/backend.dna.json"
+hash = "Qm328wyq38924y"
+
+[[instances]]
+id = "holo-chat"
+dna = "chat_dna"
+agent = "test_agent2"
+    [instances.logger]
+    type = "simple"
+    file = "app_spec.log"
+    [instances.storage]
+    type = "memory"
+    path = "tmp-storage-agent2"
+    #[instances.storage]
+    #type = "file"
+    #path = "example-config/tmp-storage"
+
+[[interfaces]]
+id = "websocket_interface"
+[interfaces.driver]
+type = "websocket"
+port = 8081
+[[interfaces.instances]]
+id = "holo-chat"
+
+
+[[interfaces]]
+id = "http_interface"
+[interfaces.driver]
+type = "http"
+port = 4002
+[[interfaces.instances]]
+id = "holo-chat"
+
+# -----------  UI  -----------
+
+[[ui_bundles]]
+id = "main"
+root_dir = "./ui"
+hash = "Qm000"
+
+[[ui_interfaces]]
+id = "ui-interface"
+bundle = "main"
+port = 4005
+dna_interface = "websocket_interface"
+
+# -----------  Networking  -----------
+
+[network]
+# n3h_path = "/home/eyss-dev/holochain/n3h/bin/n3h"
+# n3h_mode = "REAL"
+n3h_persistence_path = "/home/eyss-dev/holochain/n3h-agent2"
+n3h_log_level = "i"
+bootstrap_nodes = []

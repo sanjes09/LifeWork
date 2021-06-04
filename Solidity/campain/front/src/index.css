@@ -1,0 +1,100 @@
+@font-face{
+  font-family: Lato-Regular;
+  src: url('./assets/font/Lato-Regular.ttf');
+}
+
+@font-face{
+  font-family: Lato-Bold;
+  src: url('./assets/font/Lato-Bold.ttf');
+}
+
+@font-face{
+  font-family: Lato-Light;
+  src: url('./assets/font/Lato-Light.ttf');
+}
+
+*{
+  font-family: Lato-Regular;
+}
+
+.font-light{
+  font-family: Lato-Light;
+}
+
+.font-bold{
+  font-family: Lato-Bold;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.superCenter{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.border-shadow{
+  -webkit-box-shadow: 0px 0px 7px 1px rgb(220, 220, 220);
+  -moz-box-shadow: 0px 0px 7px 1px rgb(220, 220, 220);
+  box-shadow: 0px 0px 7px 1px rgb(220, 220, 220);
+}
+
+/* TOASTR */
+.toast-error{
+  background-color: #D92F2E  !important;
+  opacity: 1 !important;
+}
+
+.toast-info{
+  background-color: #2F96B4  !important;
+  opacity: 1 !important;
+}
+
+.toast-warning{
+  background-color: #F89406  !important;
+  opacity: 1 !important;
+}
+
+.toast-success{
+  background-color: #51A351  !important;
+  opacity: 1 !important;
+}   
+
+
+/* Scroll */
+::-webkit-scrollbar {
+  border-radius: 10px;
+  width: 7px;
+}
+
+::-webkit-scrollbar-track {
+  border-radius: 10px;
+  background: #f1f1f1; 
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #888; 
+}
+
+::-webkit-scrollbar-thumb:hover {
+  border-radius: 10px;
+  background: #555; 
+}
+
+.form-input{
+  border-radius: 10px;
+}
+
+.form-input:focus{
+  border-color: #20C178;
+  outline: 0;
+  box-shadow: 0 0 0 0;
+}

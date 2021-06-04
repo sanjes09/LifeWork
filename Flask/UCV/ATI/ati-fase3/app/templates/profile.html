@@ -1,0 +1,76 @@
+{% extends "layout-profile.html" %}
+
+{% block image_user %}
+    <img src="{{user.img}}" alt="Avatar" height="200" width="200">
+{% endblock %}
+
+    {% block button_edit %}
+        {% if myprofile == True %}
+            <!-- Button trigger modal -->
+            <button type="button" style="background-color: #7F7FD5" class="btn btn-outline-light align-top" data-toggle="modal" data-target="#profileModal">
+                <i class="fa fa-cog" aria-hidden="true"></i> Editar Perfil
+            </button>
+        {% else %}
+            {% if session["type"] == "admin" %}
+                {% if user.type == "admin" %}
+                    <form method="POST" action="/changeType/{{user._id}}/admin">
+                        <button type="submit" class="btn btn-success">Convertir a usuario</button>
+                    </form>
+                {% else %}
+                    <form method="POST" action="/changeType/{{user._id}}/user">
+                        <button type="submit" class="btn btn-success">Convertir a administrador</button>
+                    </form>
+                {% endif %}
+            {% endif %}
+        {% endif %}
+    {% endblock %}
+
+    {% block modal %}
+        {% if myprofile == True %}
+            <!-- Profile Edit Modal-->
+            <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Editar Perfil</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form id="edit" method="POST" action="/profile/{{session['id']}}" enctype="multipart/form-data">
+                                <div class="form-group">
+                                    <label for="name">Nombre</label>
+                                    <input type="text" class="form-control" id="name" name="name" aria-describedby="name" placeholder="Name"
+                                        value="{{user.name}}" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="user">Usuario</label>
+                                    <input type="text" class="form-control" id="username" name="username" aria-describedby="user" placeholder="Username"
+                                        value="{{user.username}}" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Correo</label>
+                                    <input type="text" class="form-control" id="email" name="email" aria-describedby="email"
+                                        placeholder="Email" value="{{user.email}}" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pass">Contraseña</label>
+                                    <input type="password" class="form-control" id="pass" name="pass" placeholder="Password">
+                                </div>
+                                <div class="form-group">
+                                    <label for="image-sorteo">Cambiar Imagen</label>
+                                    <input type="file" form="edit" class="form-control-file" id="file" name="file">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+                            <button type="submit" form="edit" class="btn btn-success">Guardar Cambios</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+    {% endblock %}

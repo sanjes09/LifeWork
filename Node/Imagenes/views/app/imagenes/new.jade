@@ -1,0 +1,7 @@
+extends ../../layout.jade
+block contenido
+    h1 Nueva Imagen
+    form(action="/app/imagenes", method="POST" enctype="multipart/form-data")
+        input(type="text", name="titulo", placeholder="Titulo")
+        input(type="file", name="archivo")
+        input(type="submit", name="submit")

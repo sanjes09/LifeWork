@@ -1,0 +1,17 @@
+extends ../../layout.jade
+block contenido
+    div(class="container")
+        h1 Mis Imagenes
+        for imagen in imagenes
+            .row.border
+                .col-md-10
+                    .row
+                        .col-2
+                            h2= imagen.titulo
+                        .col-10
+                            img(src="../../../public/imagenes/#{imagen._id}.#{imagen.extension}", alt="", class="w-25")
+                .col-md-2
+                    form(action="/app/imagenes/#{imagen.id}/edit", method="GET", class="d-inline-block")
+                        input(type="submit", name="submit" value="Editar")
+                    form(action="/app/imagenes/#{imagen.id}?_method=DELETE", method="POST", class="d-inline-block")
+                        input(type="submit", name="submit" value="Eliminar")
