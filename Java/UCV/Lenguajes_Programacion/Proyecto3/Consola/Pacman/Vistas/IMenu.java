@@ -116,19 +116,23 @@ public class IMenu extends javax.swing.JFrame {
         FileNameExtensionFilter filtro=new FileNameExtensionFilter("TXT","txt");
         chooser.setFileFilter(filtro);
         
-        chooser.showOpenDialog(chooser);
-        chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY); 
+        int returnVal = chooser.showOpenDialog(chooser);
+        if(returnVal == JFileChooser.APPROVE_OPTION) {
 
-        File file = chooser.getSelectedFile();
-        String fullPath = file.getAbsolutePath();
+            File file = chooser.getSelectedFile();
+            System.out.println(file);
+            String fullPath = file.getAbsolutePath();
+            
+            rutaMapa.setText(fullPath);
+        }
         
-        rutaMapa.setText(fullPath);
     }//GEN-LAST:event_cargarMapaActionPerformed
 
     
     private void empezarJuegoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_empezarJuegoActionPerformed
         try {
             Controlador ctrl = new Controlador (rutaMapa.getText(),vidas.getText(),this);
+            // Controlador ctrl = new Controlador (rutaMapa.getText(),vidas.getText(),this);
         } catch (IOException ex) {
             Logger.getLogger(IMenu.class.getName()).log(Level.SEVERE, null, ex);
         }
